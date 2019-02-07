@@ -1,0 +1,53 @@
+<html>
+    <head>
+<!--include head.txt -->
+        <title>
+            Docker Resources
+        </title>
+    </head>
+
+    <body>
+<!--include logo.txt -->
+<!--include menu.txt -->
+        <h1>
+            Docker Resources
+        </h1>
+
+        <ul>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Docker_(software)">
+                    Docker Wikipedia page
+                </a>
+            </li>
+
+            <li>
+                <a href="http://www.thedevopscourse.com/devops/infra">
+                    DevOps course page
+                </a>
+                on infrastructure as code, featuring Docker.
+            </li>
+
+            <li>
+                <a href="https://www.docker.com">
+                    Docker home page
+                </a>
+            </li>
+
+            <li>
+                <a href="https://hub.docker.com">
+                    Docker Hub home page
+                </a>
+            </li>
+
+            <li>
+                A sample
+                <a href="https://github.com/gcallah/OnlineDevops/blob/master/docker-compose.yml">
+                    Docker compose file
+                </a>
+            </li>
+
+        </ul>
+
+
+    </body>
+</html>

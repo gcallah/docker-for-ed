@@ -1,0 +1,26 @@
+<html>
+    <head>
+<!--include head.txt -->
+        <title>
+            Docker for Education
+        </title>
+    </head>
+
+    <body>
+<!--include logo.txt -->
+<!--include menu.txt -->
+        <h1>
+            Docker for Education
+        </h1>
+
+        <p>
+            Docker has great potential for use in education, 
+            potential that has hardly been exploited at this point.
+            From stable and consistent setups for program development
+            to "networks" running entirely on a laptop, we
+            believe that Docker can ease the burden on computer
+            science educators.
+        </p>
+
+    </body>
+</html>
