@@ -1,0 +1,5 @@
+FROM gcc
+
+COPY requirements.txt /requirements.txt
+
+WORKDIR /home/CPlusPlus/
