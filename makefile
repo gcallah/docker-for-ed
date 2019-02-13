@@ -31,3 +31,12 @@ nocrud:
 
 clean:
 	touch $(PTML_DIR)/*.ptml; make local
+
+build-image:
+	docker build -t cplusplus docker/
+
+run-interactive:
+	docker run --rm -it cplusplus bash
+
+run docker-sample:
+	docker run --rm cplusplus
