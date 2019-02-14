@@ -12,6 +12,8 @@ RUN apt-get -yqq install emacs24
 
 # copy our code
 COPY run_sample.sh /home/
+COPY VERSION /home/
+COPY .bashrc /home/
 ADD samples /home/samples
 
 # Set working dir
