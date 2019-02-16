@@ -39,16 +39,7 @@ build-docker-image:
 	docker build -t pyoey/cplusplus docker/
 
 run-interactive:
-	docker run --rm -it --name cppcontainer cplusplus bash
+	docker run --rm -it -v `pwd`/HW:/home/HW --name cppcontainer cplusplus bash
 
 run-sample:
 	docker run --rm cplusplus
-
-copy-to-container:
-	docker cp HW cppcontainer:/home/HW
-
-copy-from-container:
-	docker cp cppcontainer:/home/HW .
-
-save-hw:
-	docker cp cppcontainer:/home/HW .
