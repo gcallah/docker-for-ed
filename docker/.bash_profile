@@ -1,0 +1,1 @@
+alias help='make help'

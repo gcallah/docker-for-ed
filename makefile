@@ -35,8 +35,11 @@ clean:
 build-image:
 	docker build -t cplusplus docker/
 
-run-interactive:
-	docker run --rm -it cplusplus bash
+build-docker-image:
+	docker build -t pyoey/cplusplus docker/
 
-run docker-sample:
+run-interactive:
+	docker run --rm -it -v `pwd`/HW:/home/HW --name cppcontainer cplusplus bash
+
+run-sample:
 	docker run --rm cplusplus
