@@ -38,7 +38,6 @@ class Resources extends Component {
             <List bulleted>
               <List.Item href="https://gcallah.github.io/utils/unix_guide.html">gcallah.github.io/unix_guide</List.Item>
             </List>
-            <h3>Bash Basics</h3>
           </Grid.Column>
         </Grid>
 

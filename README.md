@@ -1,12 +1,18 @@
 # Docker For Education
 
-Working on docker setups for education.
+Github Pages React web application for docker for education.
 
-## Images
+## Instructions
 
+- Change dir `cd docker_for_edu_site`
+- Run `npm install`
+- Start dev server `npm start`
+- To deploy, fromt he root dir `make deploy`
+
+## Docker Images
 - C++
-- Distributed Computing
 - Programming Languages
+- Distributed Computing
 - Operating Systems (Xv6)
 
 ## License
