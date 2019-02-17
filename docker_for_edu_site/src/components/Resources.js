@@ -34,8 +34,10 @@ class Resources extends Component {
               <List.Item href="https://www.docker.com/">Docker Home</List.Item>
               <List.Item href="https://github.com/gcallah/OnlineDevops/blob/master/docker-compose.yml">Sample Docker compose file</List.Item>
             </List>
-            <h3>Git Basics</h3>
-
+            <h3>Git and Bash Basics</h3>
+            <List bulleted>
+              <List.Item href="https://gcallah.github.io/utils/unix_guide.html">gcallah.github.io/unix_guide</List.Item>
+            </List>
             <h3>Bash Basics</h3>
           </Grid.Column>
         </Grid>
