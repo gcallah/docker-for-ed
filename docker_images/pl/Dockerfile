@@ -21,11 +21,18 @@ RUN apt-get -yqq install haskell-platform
 RUN apt-get -yqq install vim nano emacs
 
 # Set working dir
-WORKDIR /home
+WORKDIR /root
 
 # copy necessary code
+COPY run_sample.sh .
+COPY .welcome .
+COPY script.sh .
 COPY VERSION .
 COPY Makefile .
+ADD samples ./samples
+
+RUN chmod 755 run_sample.sh
+RUN /bin/bash script.sh
 
 # run cmd
-CMD ["ls"]
+CMD ["./run_sample.sh"]

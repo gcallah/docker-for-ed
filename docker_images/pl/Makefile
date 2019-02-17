@@ -1,8 +1,5 @@
-build-image:
-	docker build -t pl .
-
 run-interactive:
-	docker run --rm -it -v `pwd`/HW:/home/HW --name plcontainer pl bash
+	docker run --rm -it -v `pwd`/HW:/home/HW --name plcontainer pyoey/pl bash
 
 run-sample:
 	docker run --rm cplusplus
