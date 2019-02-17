@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Loader, Dimmer, Grid, Card } from "semantic-ui-react";
+import { Loader, Dimmer, Grid } from "semantic-ui-react";
+import homeItems from "./Home-Items";
 
 class Home extends Component {
   state = {
@@ -11,6 +12,29 @@ class Home extends Component {
     this.setState({ loadingData: true });
     document.title = "Docker For Edu";
     this.setState({ loadingData: false });
+  }
+
+  renderItems = () => {
+    let itemComponents = [];
+
+    for (var i=0; i < homeItems.length; i=i+2){
+      itemComponents.push(
+        <Grid.Row key={i}>
+          <Grid.Column mobile={16} computer={8}>
+            {homeItems[i].render}
+          </Grid.Column>
+          <Grid.Column mobile={16} computer={8}>
+            {homeItems[i+1].render}
+          </Grid.Column>
+        </Grid.Row>
+      );
+    }
+
+    return (
+      <Grid stackable centered>
+        {itemComponents}
+      </Grid>
+    );
   }
 
   render() {
@@ -25,57 +49,7 @@ class Home extends Component {
     return (
       <div>
         <h1>Welcome to Docker For Education</h1>
-        <Grid stackable centered>
-          <Grid.Row>
-            <Grid.Column mobile={16} computer={8}>
-              <Card fluid>
-                <Card.Content>
-                  <Card.Header>C++ Image</Card.Header>
-                  <Card.Meta>
-                    <span>Status: Ongoing</span>
-                  </Card.Meta>
-                  <Card.Description>NYU's C++ developement environment</Card.Description>
-                </Card.Content>
-              </Card>
-            </Grid.Column>
-            <Grid.Column mobile={16} computer={8}>
-              <Card fluid>
-                <Card.Content>
-                  <Card.Header>Programming Languages Image</Card.Header>
-                  <Card.Meta>
-                    <span>Status: Ongoing</span>
-                  </Card.Meta>
-                  <Card.Description>Environment containing several languages pre-installed.</Card.Description>
-                </Card.Content>
-              </Card>
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Column mobile={16} computer={8}>
-              <Card fluid>
-                <Card.Content>
-                  <Card.Header>Distributed Computing Image</Card.Header>
-                  <Card.Meta>
-                    <span>Status: Coming Soon</span>
-                  </Card.Meta>
-                  <Card.Description>Environment for getting your hands dirty with distributed computing.</Card.Description>
-                </Card.Content>
-              </Card>
-            </Grid.Column>
-            <Grid.Column mobile={16} computer={8}>
-              <Card fluid>
-                <Card.Content>
-                  <Card.Header>Operating Systems Course Image</Card.Header>
-                  <Card.Meta>
-                    <span>Status: Coming Soon</span>
-                  </Card.Meta>
-                  <Card.Description>Environment for Xv6 environment</Card.Description>
-                </Card.Content>
-              </Card>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-
+        {this.renderItems()}
         <br /><br />
       </div>
     );
