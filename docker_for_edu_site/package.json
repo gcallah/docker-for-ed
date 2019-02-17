@@ -2,6 +2,7 @@
   "name": "docker_for_edu_site",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://vutsalsinghal.github.io/docker-for-ed",
   "dependencies": {
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
@@ -14,10 +15,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "serve -s build"
   },
   "eslintConfig": {
     "extends": "react-app"

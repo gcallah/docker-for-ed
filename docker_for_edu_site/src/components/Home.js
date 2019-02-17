@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Loader, Dimmer, Grid } from "semantic-ui-react";
+import { Loader, Dimmer, Grid, Card } from "semantic-ui-react";
 
 class Home extends Component {
   state = {
@@ -24,9 +24,45 @@ class Home extends Component {
 
     return (
       <div>
-        <Grid stackable reversed="mobile">
-          <Grid.Column mobile={16} computer={8}>
-            Hello World!
+        <h1>Welcome to Docker For Education</h1>
+        <Grid stackable centered>
+          <Grid.Column>
+            <Card>
+              <Card.Content>
+                <Card.Header>C++ Image</Card.Header>
+                <Card.Meta>
+                  <span>Status: Ongoing</span>
+                </Card.Meta>
+                <Card.Description>NYU's C++ developement environment</Card.Description>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Distributed Computing Image</Card.Header>
+                <Card.Meta>
+                  <span>Status: Coming Soon</span>
+                </Card.Meta>
+                <Card.Description>Environment for getting your hands dirty with distributed computing.</Card.Description>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Programming Languages Image</Card.Header>
+                <Card.Meta>
+                  <span>Status: Coming Soon</span>
+                </Card.Meta>
+                <Card.Description>Environment containing several languages pre-installed.</Card.Description>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Operating Systems Course Image</Card.Header>
+                <Card.Meta>
+                  <span>Status: Coming Soon</span>
+                </Card.Meta>
+                <Card.Description>Environment for Xv6 environment</Card.Description>
+              </Card.Content>
+            </Card>
           </Grid.Column>
         </Grid>
 
