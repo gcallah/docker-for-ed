@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button, Modal, Header } from "semantic-ui-react";
+import { Card, Button, Modal, Header, List } from "semantic-ui-react";
 
 export default [{
   name: 'Cpp Image',
@@ -11,25 +11,28 @@ export default [{
           <span>Status: Ongoing</span>
         </Card.Meta>
         <Card.Description>NYU's C++ developement environment</Card.Description>
-        <Modal trigger={<Button floated="right" primary basic>Details</Button>}>
+        <Modal size={'tiny'} trigger={<Button floated="right" primary basic>Details</Button>}>
           <Modal.Header>C++ Image Details</Modal.Header>
           <Modal.Content>
             <Modal.Description>
               <Header>Instructions</Header>
-              <pre>- Create a course directory.</pre>
-              <pre>- Download Makefile below (save as 'Makefile') and place it in the course dir</pre>
-              <pre>- Open terminal inside the course dir</pre>
-              <pre>- Run 'make run-interactive'</pre>
+              <List bulleted>
+                <List.Item>Create a course directory</List.Item>
+                <List.Item>Download Makefile below (save as 'Makefile' without any extension)</List.Item>
+                <List.Item>Place the file it in the course dir</List.Item>
+                <List.Item>Open terminal inside the course dir</List.Item>
+                <List.Item>Run 'make run-interactive'</List.Item>
+              </List>
               <Header>Downloads</Header>
               <Button target="_blank" href={"https://raw.githubusercontent.com/vutsalsinghal/docker-for-ed/master/docker_images/cpp/Makefile"} primary>Makefile</Button>
-              <br/>
+              <br />
             </Modal.Description>
           </Modal.Content>
         </Modal>
       </Card.Content>
     </Card>
   )
-},{
+}, {
   name: 'PL Image',
   render: (
     <Card fluid key={2}>
@@ -42,7 +45,7 @@ export default [{
       </Card.Content>
     </Card>
   )
-},{
+}, {
   name: 'Distributed Image',
   render: (
     <Card fluid key={3}>
@@ -55,7 +58,7 @@ export default [{
       </Card.Content>
     </Card>
   )
-},{
+}, {
   name: 'OS Image',
   render: (
     <Card fluid key={4}>

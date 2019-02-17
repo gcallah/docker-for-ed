@@ -7,7 +7,7 @@ Github Pages React web application for docker for education.
 - Change dir `cd docker_for_edu_site`
 - Run `npm install`
 - Start dev server `npm start`
-- To deploy, fromt he root dir `make deploy`
+- To deploy, from the root dir `make deploy`
 
 ## Docker Images
 - C++

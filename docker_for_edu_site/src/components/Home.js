@@ -17,14 +17,14 @@ class Home extends Component {
   renderItems = () => {
     let itemComponents = [];
 
-    for (var i=0; i < homeItems.length; i=i+2){
+    for (var i = 0; i < homeItems.length; i = i + 2) {
       itemComponents.push(
         <Grid.Row key={i}>
           <Grid.Column mobile={16} computer={8}>
             {homeItems[i].render}
           </Grid.Column>
           <Grid.Column mobile={16} computer={8}>
-            {homeItems[i+1].render}
+            {homeItems[i + 1].render}
           </Grid.Column>
         </Grid.Row>
       );
@@ -48,7 +48,9 @@ class Home extends Component {
 
     return (
       <div>
-        <h1>Welcome to Docker For Education</h1>
+        <br />
+        <h1 style={{ "text-align": "center" }}>Welcome to Docker For Education</h1>
+        <br /><br />
         {this.renderItems()}
         <br /><br />
       </div>
