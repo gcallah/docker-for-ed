@@ -49,7 +49,7 @@ class Home extends Component {
               <Card.Content>
                 <Card.Header>Programming Languages Image</Card.Header>
                 <Card.Meta>
-                  <span>Status: Coming Soon</span>
+                  <span>Status: Ongoing</span>
                 </Card.Meta>
                 <Card.Description>Environment containing several languages pre-installed.</Card.Description>
               </Card.Content>
