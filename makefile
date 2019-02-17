@@ -33,7 +33,7 @@ clean:
 	touch $(PTML_DIR)/*.ptml; make local
 
 build-image:
-	docker build -t cplusplus docker/
+	docker build -t cplusplus docker_images/cpp/
 
 build-docker-image:
 	docker build -t pyoey/cplusplus docker/
