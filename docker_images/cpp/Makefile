@@ -1,5 +1,5 @@
 run-interactive:
-	docker run --rm -it -v `pwd`/HW:/home/HW --name cppcontainer cplusplus bash
+	docker run --rm -it -v `pwd`/HW:/home/HW --name cppcontainer pyoey/cplusplus bash
 
 run-sample:
 	docker run --rm cplusplus
