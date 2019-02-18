@@ -49,7 +49,7 @@ class Home extends Component {
     return (
       <div>
         <br />
-        <h1 style={{ "text-align": "center" }}>Welcome to Docker For Education</h1>
+        <h1 style={{ "textAlign": "center" }}>Welcome to Docker For Education</h1>
         <br /><br />
         {this.renderItems()}
         <br /><br />

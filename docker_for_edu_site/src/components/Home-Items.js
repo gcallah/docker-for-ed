@@ -42,6 +42,24 @@ export default [{
           <span>Status: Ongoing</span>
         </Card.Meta>
         <Card.Description>Environment containing several languages pre-installed.</Card.Description>
+        <Modal size={'tiny'} trigger={<Button floated="right" primary basic>Details</Button>}>
+          <Modal.Header>Programming Languages Image Details</Modal.Header>
+          <Modal.Content>
+            <Modal.Description>
+              <Header>Instructions</Header>
+              <List bulleted>
+                <List.Item>Create a course directory</List.Item>
+                <List.Item>Download Makefile below (save as 'Makefile' without any extension)</List.Item>
+                <List.Item>Place the file it in the course dir</List.Item>
+                <List.Item>Open terminal inside the course dir</List.Item>
+                <List.Item>Run 'make run-interactive'</List.Item>
+              </List>
+              <Header>Downloads</Header>
+              <Button target="_blank" href={"https://raw.githubusercontent.com/vutsalsinghal/docker-for-ed/master/docker_images/pl/Makefile"} primary>Makefile</Button>
+              <br />
+            </Modal.Description>
+          </Modal.Content>
+        </Modal>
       </Card.Content>
     </Card>
   )
