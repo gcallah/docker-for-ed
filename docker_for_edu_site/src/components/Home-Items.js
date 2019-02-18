@@ -19,7 +19,7 @@ export default [{
               <List bulleted>
                 <List.Item>Create a course directory</List.Item>
                 <List.Item>Download Makefile below (save as 'Makefile' without any extension)</List.Item>
-                <List.Item>Place the file it in the course dir</List.Item>
+                <List.Item>Place the file in the course dir</List.Item>
                 <List.Item>Open terminal inside the course dir</List.Item>
                 <List.Item>Run 'make run-interactive'</List.Item>
               </List>
@@ -50,7 +50,7 @@ export default [{
               <List bulleted>
                 <List.Item>Create a course directory</List.Item>
                 <List.Item>Download Makefile below (save as 'Makefile' without any extension)</List.Item>
-                <List.Item>Place the file it in the course dir</List.Item>
+                <List.Item>Place the file in the course dir</List.Item>
                 <List.Item>Open terminal inside the course dir</List.Item>
                 <List.Item>Run 'make run-interactive'</List.Item>
               </List>
