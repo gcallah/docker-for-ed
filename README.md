@@ -9,6 +9,7 @@ Working on docker setups for education.
 - Run `npm install`
 - Start dev server `npm start`
 - To deploy, from the root dir `make deploy`
+- React prod files in `docker_for_edu_site/build` dir.
 
 ## Docker Images
 
