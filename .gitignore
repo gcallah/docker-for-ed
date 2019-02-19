@@ -1,2 +1,10 @@
-docker_for_edu_site/
-*.log
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.vscode/
+*.log*
+
+build/
+node_modules

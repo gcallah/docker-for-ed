@@ -2,12 +2,23 @@
 
 Working on docker setups for education.
 
-## Images
+## Instructions
 
-- C++
-- Distributed Computing
-- Programming Languages
-- Operating Systems (Xv6)
+### For React gh-pages site:
+- Change dir `cd docker_for_edu_site`
+- Run `npm install`
+- Start dev server `npm start`
+- To deploy, from the root dir `make deploy`
+
+## Docker Images
+
+| Name | Status|
+|------|------|
+| C++ | In Progress |
+| Programming Languages | In Progress |
+| Distributed Computing | Soon |
+| Operating Systems (Xv6) | Soon |
+| Big Data | Soon |
 
 ## License
 

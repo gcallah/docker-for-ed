@@ -1,3 +1,5 @@
+# Docker commands:
+
 build-cpp:
 	docker build -t cplusplus docker_images/cpp/
 
@@ -21,3 +23,13 @@ run-interactive-pl:
 
 push-pl:
 	docker push pyoey/pl
+
+
+# React gh-pages commands:
+
+deploy:
+	cd docker_for_edu_site; \
+	npm run build; \
+	cp favicon.ico build; \
+	npm run deploy; \
+	cd ..
