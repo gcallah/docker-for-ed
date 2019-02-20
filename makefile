@@ -1,42 +1,35 @@
-# A template makefile that works for static websites.
-# Need to export as ENV var
-export TEMPLATE_DIR = templates
-PTML_DIR = html_src
-UTILS_DIR = utils
+# Docker commands:
 
-INCS = $(TEMPLATE_DIR)/head.txt $(TEMPLATE_DIR)/logo.txt $(TEMPLATE_DIR)/menu.txt
+build-cpp:
+	docker build -t cplusplus docker_images/cpp/
 
-HTMLFILES = $(shell ls $(PTML_DIR)/*.ptml | sed -e 's/.ptml/.html/' | sed -e 's/html_src\///')
+build-docker-cpp:
+	docker build -t pyoey/cplusplus docker_images/cpp/
 
-%.html: $(PTML_DIR)/%.ptml $(INCS)
-	python3 $(UTILS_DIR)/html_checker.py $< 
-	$(UTILS_DIR)/html_include.awk <$< >$@
-	git add $@
+run-interactive-cpp:
+	docker run --rm -it --name plcontainer pyoey/cplusplus bash
 
-local: $(HTMLFILES)
+push-cpp:
+	docker push pyoey/cplusplus
 
-prod: $(INCS) $(HTMLFILES)
-	-git commit -a 
-	git pull origin master
-	git push origin master
+build-pl:
+	docker build -t pl docker_images/pl/
 
-submods:
-	git submodule foreach 'git pull origin master'
-	
-nocrud:
-	rm *~
-	rm .*swp
-	rm $(PTML_DIR)/*~
-	rm $(PTML_DIR)/.*swp
+build-docker-pl:
+	docker build -t pyoey/pl docker_images/pl/
 
-clean:
-	touch $(PTML_DIR)/*.ptml; make local
+run-interactive-pl:
+	docker run --rm -it --name plcontainer pyoey/pl bash
 
-build-image:
-	docker build -t cplusplus docker/
+push-pl:
+	docker push pyoey/pl
 
-run-interactive:
-	docker run --rm -it cplusplus bash
 
-run docker-sample:
-	docker run --rm cplusplus
+# React gh-pages commands:
+
+deploy:
+	cd docker_for_edu_site; \
+	npm run build; \
+	cp favicon.ico build; \
+	npm run deploy; \
+	cd ..
