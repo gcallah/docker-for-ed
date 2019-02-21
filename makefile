@@ -28,8 +28,14 @@ push-pl:
 # React gh-pages commands:
 
 deploy:
-	cd docker_for_edu_site; \
-	npm run build; \
-	cp favicon.ico build; \
-	npm run deploy; \
+	rm -r static && \
+	rm precache-manifest* && \
+	cd docker_for_edu_site && \
+	npm run build && \
+	cp favicon.ico build && \
+	cp -r build/* .. && \
 	cd ..
+
+make start-local:
+	cd docker_for_edu_site && \
+	npm run start
