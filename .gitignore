@@ -7,3 +7,5 @@
 *.log*
 
 docker_for_edu_site/node_modules
+*__pycache__
+.pytest_cache

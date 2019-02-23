@@ -7,7 +7,7 @@ build-docker-cpp:
 	docker build -t pyoey/cplusplus docker_images/cpp/
 
 run-interactive-cpp:
-	docker run --rm -it --name plcontainer pyoey/cplusplus bash
+	docker run --rm -it --name cppcontainer pyoey/cplusplus bash
 
 push-cpp:
 	docker push pyoey/cplusplus
@@ -39,3 +39,12 @@ deploy:
 make start-local:
 	cd docker_for_edu_site && \
 	npm run start
+
+
+# Tests
+
+test-docker-pl:
+	pytest -v tests/test-docker-pl.py
+
+test-docker-cpp:
+	pytest -v tests/test-docker-cpp.py
