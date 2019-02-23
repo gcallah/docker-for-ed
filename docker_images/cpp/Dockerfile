@@ -7,7 +7,7 @@ RUN apt-get -yqq update
 #RUN apt-get -yqq upgrade
 RUN apt-get -yqq install build-essential tree
 RUN apt-get -yqq install curl gnupg git gdb clang-format
-RUN apt-get -yqq install vim nano emacs24
+RUN apt-get -yqq install vim nano
 
 # Set working dir
 WORKDIR /home

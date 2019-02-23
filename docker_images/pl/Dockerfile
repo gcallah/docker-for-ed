@@ -17,8 +17,11 @@ RUN apt-get -yqq install sbcl
 # Install Haskel
 RUN apt-get -yqq install haskell-platform
 
+# Install MIT-Scheme
+RUN apt-get -yqq install mit-scheme
+
 # Install terminal-based editors
-RUN apt-get -yqq install vim nano emacs
+RUN apt-get -yqq install vim nano
 
 # Set working dir
 WORKDIR /root
