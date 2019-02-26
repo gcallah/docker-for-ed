@@ -1,0 +1,55 @@
+{
+    "items": [
+        {
+            "name": "C++ Development",
+            "status": "Ongoing",
+            "description": "NYU's C++ development environment",
+            "details": {
+                "instructions": [
+                    "Create a course directory",
+                    "Download Makefile below (save as 'Makefile' without any extension)",
+                    "Place the file in the course dir",
+                    "Open terminal inside the course dir",
+                    "Run 'make run-interactive'"
+                ],
+                "downloadButton": {
+                    "text": "Makefile",
+                    "link": "https://raw.githubusercontent.com/vutsalsinghal/docker-for-ed/master/docker_images/cpp/Makefile"
+                }
+            }
+        },
+        {
+            "name": "Programming Languages",
+            "status": "Ongoing",
+            "description": "Environment bundled with several programming languages.",
+            "details": {
+                "instructions": [
+                    "Create a course directory",
+                    "Download Makefile below (save as 'Makefile' without any extension)",
+                    "Place the file in the course dir",
+                    "Open terminal inside the course dir",
+                    "Run 'make run-interactive'"
+                ],
+                "downloadButton": {
+                    "text": "Makefile",
+                    "link": "https://raw.githubusercontent.com/vutsalsinghal/docker-for-ed/master/docker_images/pl/Makefile"
+                }
+            }
+        },
+        {
+            "name": "Distributed Computing",
+            "status": "Coming Soon",
+            "description": "Environment for designing distributed systems using Golang"
+        },
+        {
+            "name": "Operating Systems (Xv6)",
+            "status": "Coming Soon",
+            "description": "Environment to run the xv6 OS out of the box"
+        },
+        {
+            "name": "Java Environment",
+            "status": "Coming Soon",
+            "description": "Java runtime environment"
+        }
+    ]
+}

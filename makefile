@@ -7,7 +7,7 @@ build-docker-cpp:
 	docker build -t pyoey/cplusplus docker_images/cpp/
 
 run-interactive-cpp:
-	docker run --rm -it --name plcontainer pyoey/cplusplus bash
+	docker run --rm -it --name cppcontainer pyoey/cplusplus bash
 
 push-cpp:
 	docker push pyoey/cplusplus
@@ -27,9 +27,24 @@ push-pl:
 
 # React gh-pages commands:
 
-deploy:
-	cd docker_for_edu_site; \
-	npm run build; \
-	cp favicon.ico build; \
-	npm run deploy; \
+build-react:
+	rm -r static && \
+	rm precache-manifest* && \
+	cd docker_for_edu_site && \
+	npm run build && \
+	cp favicon.ico build && \
+	cp -r build/* .. && \
 	cd ..
+
+make start-local:
+	cd docker_for_edu_site && \
+	npm run start
+
+
+# Tests
+
+test-docker-pl:
+	pytest -v tests/test-docker-pl.py
+
+test-docker-cpp:
+	pytest -v tests/test-docker-cpp.py

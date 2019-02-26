@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Loader, Dimmer, Grid } from "semantic-ui-react";
 import homeItems from "./Home-Items";
+import * as data from "../data/home.json";
 
 class Home extends Component {
   state = {
@@ -10,7 +11,7 @@ class Home extends Component {
 
   async componentDidMount() {
     this.setState({ loadingData: true });
-    document.title = "Docker For Edu";
+    document.title = data.title;
     this.setState({ loadingData: false });
   }
 
@@ -21,10 +22,10 @@ class Home extends Component {
       itemComponents.push(
         <Grid.Row key={i}>
           <Grid.Column mobile={16} computer={8}>
-            {homeItems[i].render}
+            {homeItems[i]}
           </Grid.Column>
           <Grid.Column mobile={16} computer={8}>
-            {homeItems[i + 1].render}
+            {homeItems[i + 1]}
           </Grid.Column>
         </Grid.Row>
       );
@@ -49,7 +50,7 @@ class Home extends Component {
     return (
       <div>
         <br />
-        <h1 style={{ "textAlign": "center" }}>Welcome to Docker For Education</h1>
+        <h1 style={{ "textAlign": "center" }}>{data.heading}</h1>
         <br /><br />
         {this.renderItems()}
         <br /><br />
