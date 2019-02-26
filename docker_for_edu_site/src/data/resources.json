@@ -1,30 +1,41 @@
 {
     "page": "/resources",
     "title": "Docker For Edu | Resources",
-    "items":[{
-        "sectionId": 1,
-        "content": [{
-            "link": "https://opensource.com/resources/what-docker",
-            "text": "What is Docker"
-        }, {
-            "link": "https://en.wikipedia.org/wiki/Docker_(software)",
-            "text": "Docker Wiki"
-        }, {
-            "link": "http://www.thedevopscourse.com/devops/infra",
-            "text": "NYU Tandon DevOps Course"
-        }, {
-            "link": "https://www.docker.com/",
-            "text": "Docker Home"
-        }, {
-            "link": "https://github.com/gcallah/OnlineDevops/blob/master/docker-compose.yml",
-            "text": "Sample Docker compose file"
-        }]
-    }, {
-        "sectionId": 2,
-        "subheading": "Git & Bash Basics",
-        "content": [{
-            "link": "https://gcallah.github.io/utils/unix_guide.html",
-            "text": "UNIX Command Line Ref"
-        }]
-    }]
+    "items": [
+        {
+            "sectionId": 1,
+            "content": [
+                {
+                    "link": "https://opensource.com/resources/what-docker",
+                    "text": "What is Docker"
+                },
+                {
+                    "link": "https://en.wikipedia.org/wiki/Docker_(software)",
+                    "text": "Docker Wiki"
+                },
+                {
+                    "link": "http://www.thedevopscourse.com/devops/infra",
+                    "text": "NYU Tandon DevOps Course"
+                },
+                {
+                    "link": "https://www.docker.com/",
+                    "text": "Docker Home"
+                },
+                {
+                    "link": "https://github.com/gcallah/OnlineDevops/blob/master/docker-compose.yml",
+                    "text": "Sample Docker compose file"
+                }
+            ]
+        },
+        {
+            "sectionId": 2,
+            "subheading": "Git & Bash Basics",
+            "content": [
+                {
+                    "link": "https://gcallah.github.io/utils/unix_guide.html",
+                    "text": "UNIX Command Line Ref"
+                }
+            ]
+        }
+    ]
 }

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Loader, Dimmer, Grid, List } from "semantic-ui-react";
 import * as data from "../data/resources.json";
+
 class Resources extends Component {
   state = {
     msg: '',
@@ -23,10 +24,10 @@ class Resources extends Component {
     }
     const sections = data.items.map(section => {
       return (
-        <div key={"resources_section_"+section.sectionId}>
+        <div key={"resources_section_" + section.sectionId}>
           {section.subheading && <h3>{section.subheading}</h3>}
           <List bulleted>
-            { section.content.map((resource, idx) => <List.Item key={"resources_section_"+section.sectionId+"_link_"+idx} href = {resource.link}>{resource.text}</List.Item> ) }
+            {section.content.map((resource, idx) => <List.Item key={"resources_section_" + section.sectionId + "_link_" + idx} href={resource.link}>{resource.text}</List.Item>)}
           </List>
           <br />
         </div>

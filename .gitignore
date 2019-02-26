@@ -11,3 +11,4 @@ docker_for_edu_site/shrinkwrap.yaml
 
 *__pycache__
 .pytest_cache
+*-lock.json

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Loader, Dimmer, Grid, List } from "semantic-ui-react";
+import * as data from "../data/team.json";
 
 class Team extends Component {
   state = {
@@ -9,7 +10,7 @@ class Team extends Component {
 
   async componentDidMount() {
     this.setState({ loadingData: true });
-    document.title = "Docker For Edu | Team";
+    document.title = data.title;
     this.setState({ loadingData: false });
   }
 
@@ -21,19 +22,24 @@ class Team extends Component {
         </Dimmer>
       );
     }
+    const sections = data.items.map(section => {
+      return (
+        <div key={"team_section_" + section.sectionId}>
+          {section.subheading && <h3>{section.subheading}</h3>}
+          <List bulleted>
+            {section.content.map((resource, idx) => <List.Item key={"team_section_" + section.sectionId + "_link_" + idx} href={resource.link}>{resource.text}</List.Item>)}
+          </List>
+          <br />
+        </div>
+      )
+    })
 
     return (
       <div>
         <Grid stackable reversed="mobile">
           <Grid.Column mobile={16} computer={8}>
-            <h2>Team</h2>
-            <List bulleted>
-              <List.Item href="https://github.com/gcallah">Prof. Eugene Callahan</List.Item>
-              <List.Item href="https://github.com/vutsalsinghal">Vutsal Singhal</List.Item>
-              <List.Item>Karan Mehta</List.Item>
-              <List.Item>Ujjawal Gupta</List.Item>
-              <List.Item>Praphulla Bhawsar</List.Item>
-            </List>
+            <h2>Team Members</h2>
+            {sections}
           </Grid.Column>
         </Grid>
 
