@@ -27,7 +27,7 @@ push-pl:
 
 # React gh-pages commands:
 
-deploy:
+build-react:
 	rm -r static && \
 	rm precache-manifest* && \
 	cd docker_for_edu_site && \
