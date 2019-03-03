@@ -10,8 +10,8 @@ RUN apt-get install -y libsdl1.2-dev libtool-bin libglib2.0-dev libz-dev libpixm
 
 RUN cd qemu && ./configure --disable-kvm --target-list="i386-softmmu x86_64-softmmu" --python=/usr/bin/python2.7 && make && make install && cd ..
 
-ADD ./xv6-public xv6
+ADD xv6-public xv6
 
 WORKDIR xv6
 
-CMD ["sh"]
+CMD cd /xv6 && make qemu && ./kernel
