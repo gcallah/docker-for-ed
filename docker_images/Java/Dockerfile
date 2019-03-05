@@ -22,9 +22,15 @@ RUN echo 'deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main' >> /
 RUN update-java-alternatives -s java-8-oracle
 
 RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> ~/.bashrc
-
+ 
 #Clean up Apt
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+
+COPY ./Samples/Test.java ./home
+
+#Setting the working directory
+WORKDIR /home
 
 #baseimage's init system
 CMD ["/sbin/my_init"]
