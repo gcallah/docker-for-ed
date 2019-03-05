@@ -17,8 +17,9 @@ RUN echo 'deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main' >> /
     apt-get clean && \
     rm -rf /var/cache/oracle-jdk${JAVA_VER}-installer
 
-#Install some editors
+#Install some editors and essentials
 RUN apt-get update && apt-get install -y emacs23-nox
+RUN apt-get install -y make
 
 
 #Set as the default java
@@ -28,9 +29,6 @@ RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> ~/.bashrc
  
 #Clean up Apt
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-
-COPY ./Samples/Test.java ./home
 
 #Setting the working directory
 WORKDIR /home
