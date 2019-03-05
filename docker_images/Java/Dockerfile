@@ -17,6 +17,9 @@ RUN echo 'deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main' >> /
     apt-get clean && \
     rm -rf /var/cache/oracle-jdk${JAVA_VER}-installer
 
+#Install some editors
+RUN apt-get update && apt-get install -y emacs23-nox
+
 
 #Set as the default java
 RUN update-java-alternatives -s java-8-oracle
