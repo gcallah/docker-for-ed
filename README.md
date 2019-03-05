@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/vutsalsinghal/docker-for-ed/master/docker_for_edu_site/favicon.ico">
+</p>
+
 # Docker For Education
 
 Working on docker setups for education.
@@ -17,8 +21,9 @@ Working on docker setups for education.
 |------|------|
 | C++ | In Progress |
 | Programming Languages | In Progress |
+| Java | Soon |
 | Distributed Computing | Soon |
-| Operating Systems (Xv6) | Soon |
+| Operating Systems (Xv6) | In Progress |
 | Big Data | Soon |
 
 ## License

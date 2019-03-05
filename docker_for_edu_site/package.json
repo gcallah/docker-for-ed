@@ -7,10 +7,9 @@
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-scripts": "2.1.5",
-    "react-router-dom": "",
-    "semantic-ui-css": "",
-    "semantic-ui-react": "",
-    "gh-pages": ""
+    "react-router-dom": "^4.3.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.83.0"
   },
   "scripts": {
     "start": "react-scripts start",
