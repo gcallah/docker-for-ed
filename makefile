@@ -38,7 +38,7 @@ build-react:
 
 make start-local:
 	cd docker_for_edu_site && \
-	npm run start
+	npm start
 
 
 # Tests

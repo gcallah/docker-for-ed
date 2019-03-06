@@ -1,31 +1,31 @@
 {
-    "page": "/team",
-    "title": "Docker For Edu | Team",
-    "items": [
+  "page": "/team",
+  "title": "Docker For Edu | Team",
+  "items": [
+    {
+      "sectionId": 1,
+      "content": [
         {
-            "sectionId": 1,
-            "content": [
-                {
-                    "link": "https://github.com/gcallah",
-                    "text": "Prof. Eugene Callahan"
-                },
-                {
-                    "link": "https://github.com/vutsalsinghal",
-                    "text": "Vutsal Singhal"
-                },
-                {
-                    "link": "https://github.com/theEIC",
-                    "text": "Praphulla Bhawsar"
-                },
-                {
-                    "link": "",
-                    "text": "Karan Mehta"
-                },
-                {
-                    "link": "",
-                    "text": "Ujjawal Gupta"
-                }
-            ]
+          "link": "https://github.com/gcallah",
+          "text": "Prof. Eugene Callahan"
+        },
+        {
+          "link": "https://github.com/vutsalsinghal",
+          "text": "Vutsal Singhal"
+        },
+        {
+          "link": "https://github.com/theEIC",
+          "text": "Praphulla Bhawsar"
+        },
+        {
+          "link": "",
+          "text": "Karan Mehta"
+        },
+        {
+          "link": "",
+          "text": "Ujjawal Gupta"
         }
-    ]
+      ]
+    }
+  ]
 }

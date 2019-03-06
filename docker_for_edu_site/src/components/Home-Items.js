@@ -4,21 +4,21 @@ import * as data from "../data/homeItems.json";
 
 const homeItems = data.items.map((item, idx) => {
   return (
-    <Card fluid key={"card_"+(idx)}>
+    <Card fluid key={"card_" + (idx)}>
       <Card.Content>
         <Card.Header>{item.name}</Card.Header>
         <Card.Meta>
           <span>Status: {item.status}</span>
         </Card.Meta>
         <Card.Description>{item.description}</Card.Description>
-        { item.details && 
+        {item.details &&
           <Modal size={'tiny'} trigger={<Button floated="right" primary basic>Details</Button>}>
             <Modal.Header>{item.name} Details</Modal.Header>
             <Modal.Content>
               <Modal.Description>
                 <Header>Instructions</Header>
                 <List bulleted>
-                  {item.details.instructions.map((instruction, instrIdx) => <List.Item key={"card_"+(idx)+"_instr_"+(instrIdx)}>{instruction}</List.Item>)}
+                  {item.details.instructions.map((instruction, instrIdx) => <List.Item key={"card_" + (idx) + "_instr_" + (instrIdx)}>{instruction}</List.Item>)}
                 </List>
                 <Header>Download</Header>
                 <Button target="_blank" href={item.details.downloadButton.link} primary>{item.details.downloadButton.text}</Button>
