@@ -37,14 +37,28 @@
       }
     },
     {
+      "name": "Operating Systems (Xv6)",
+      "status": "Ongoing",
+      "description": "Environment to run the xv6 OS out of the box",
+      "details": {
+        "instructions": [
+          "Create a course directory. Copy/note its full path (e.g.- /home/xyz/workdir/OS).",
+          "Download the Makefile by clicking on the button below.",
+          "Move the downloaded Makefile to the course directory you created.",
+          "Open a terminal inside the course directory.",
+          "Run 'make start-xv6'.",
+          "Every time you need to run xv6 after this, you need to run 'make run-xv6'."
+        ],
+        "downloadButton": {
+          "text": "Makefile",
+          "link": "https://raw.githubusercontent.com/vutsalsinghal/docker-for-ed/master/docker_images/os/Makefile"
+        }
+      }
+    },
+    {
       "name": "Distributed Computing",
       "status": "Coming Soon",
       "description": "Environment for designing distributed systems using Golang"
-    },
-    {
-      "name": "Operating Systems (Xv6)",
-      "status": "Ongoing",
-      "description": "Environment to run the xv6 OS out of the box"
     },
     {
       "name": "Java Environment",
