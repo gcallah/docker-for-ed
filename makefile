@@ -1,5 +1,7 @@
 # Docker commands:
 
+build-images: build-cpp build-pl
+
 build-cpp:
 	docker build -t cplusplus docker_images/cpp/
 
@@ -36,7 +38,7 @@ build-react:
 	cp -r build/* .. && \
 	cd ..
 
-make start-local:
+start-local:
 	cd docker_for_edu_site && \
 	npm start
 
@@ -44,7 +46,10 @@ make start-local:
 # Tests
 
 test-docker-pl:
-	pytest -v tests/test-docker-pl.py
+	pytest -v tests/test_docker-pl.py
 
-test-docker-cpp:
-	pytest -v tests/test-docker-cpp.py
+test-cpp:
+	pytest -v tests/test_docker-cpp.py
+
+run-all-tests:
+	pytest -v tests
