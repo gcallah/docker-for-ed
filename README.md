@@ -1,8 +1,10 @@
+# Docker For Education
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gcallah/docker-for-ed/master/docker_for_edu_site/favicon.ico">
+  <img src="https://raw.githubusercontent.com/vutsalsinghal/docker-for-ed/master/docker_for_edu_site/favicon.ico">
 </p>
 
-# Docker For Education
+[![Build Status](https://travis-ci.com/vutsalsinghal/docker-for-ed.svg?branch=master)](https://travis-ci.com/vutsalsinghal/docker-for-ed)
 
 Working on docker setups for education.
 
@@ -21,7 +23,7 @@ Working on docker setups for education.
 |------|------|
 | C++ | In Progress |
 | Programming Languages | In Progress |
-| Java | In Progress |
+| Java | Soon |
 | Distributed Computing | Soon |
 | Operating Systems (Xv6) | In Progress |
 | Big Data | Soon |
