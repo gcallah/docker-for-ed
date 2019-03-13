@@ -29,6 +29,7 @@ build-pl:
 build-docker-pl:
 	docker build -t $(DOCKER_USER)/pl docker_images/pl/
 
+# Again, I don't think the runs should be in the makefile:
 run-interactive-pl:
 	docker run --rm -it --name plcontainer $(DOCKER_USER)/pl bash
 
