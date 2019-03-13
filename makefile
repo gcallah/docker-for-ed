@@ -15,6 +15,8 @@ build-cpp:
 build-docker-cpp:
 	docker build -t $(DOCKER_USER)/cplusplus docker_images/cpp/
 
+# I don't recommend things we run like this to be in makefile:
+# reserve this for builds. make a shell script for running things.
 run-interactive-cpp:
 	docker run --rm -it --name cppcontainer $(DOCKER_USER)/cplusplus bash
 
