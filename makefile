@@ -1,30 +1,37 @@
+DOCKER_USER = gcallah
+
+
 # Docker commands:
 
 build-images: build-cpp build-pl
+
+build-docker-images: build-docker-cpp build-docker-pl
+
+push-images: push-cpp push-pl
 
 build-cpp:
 	docker build -t cplusplus docker_images/cpp/
 
 build-docker-cpp:
-	docker build -t pyoey/cplusplus docker_images/cpp/
+	docker build -t $(DOCKER_USER)/cplusplus docker_images/cpp/
 
 run-interactive-cpp:
-	docker run --rm -it --name cppcontainer pyoey/cplusplus bash
+	docker run --rm -it --name cppcontainer $(DOCKER_USER)/cplusplus bash
 
 push-cpp:
-	docker push pyoey/cplusplus
+	docker push $(DOCKER_USER)/cplusplus
 
 build-pl:
 	docker build -t pl docker_images/pl/
 
 build-docker-pl:
-	docker build -t pyoey/pl docker_images/pl/
+	docker build -t $(DOCKER_USER)/pl docker_images/pl/
 
 run-interactive-pl:
-	docker run --rm -it --name plcontainer pyoey/pl bash
+	docker run --rm -it --name plcontainer $(DOCKER_USER)/pl bash
 
 push-pl:
-	docker push pyoey/pl
+	docker push $(DOCKER_USER)/pl
 
 
 # React gh-pages commands:

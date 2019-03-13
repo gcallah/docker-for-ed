@@ -1,10 +1,20 @@
 language: python
 python:
     - "3.6"
+addons:
+  apt:
+    packages:
+      - "python3"
+      - "python3-pip"
 services:
     - docker
+before_install:
+    - "pip3 install --upgrade pip"
+    - "pip install -r requirements.txt"
 install:
-    - pip install -r requirements.txt
     - make build-images
 script:
     - "make run-all-tests"
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+    - make build-docker-images
+    - "make push-images"
