@@ -4,7 +4,7 @@
   <img src="https://raw.githubusercontent.com/vutsalsinghal/docker-for-ed/master/docker_for_edu_site/favicon.ico">
 </p>
 
-[![Build Status](https://travis-ci.com/vutsalsinghal/docker-for-ed.svg?branch=master)](https://travis-ci.com/vutsalsinghal/docker-for-ed)
+[![Build Status](https://travis-ci.com/gcallah/docker-for-ed.svg?branch=master)](https://travis-ci.com/gcallah/docker-for-ed)
 
 Working on docker setups for education.
 
