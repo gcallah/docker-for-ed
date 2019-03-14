@@ -5,7 +5,7 @@ compile-sample-HelloWorld:
 	docker run --rm -v `pwd`:/home demo/oracle-java:8 javac Main.java
 
 run-sample-HelloWorld:
-	docker run --rm -v `pwd`:/home demo/oracle-java:8 java Main.java
+	docker run --rm -v `pwd`:/home demo/oracle-java:8 java Main
 
 help:
 	@echo
