@@ -23,7 +23,7 @@ Working on docker setups for education.
 |------|------|
 | C++ | In Progress |
 | Programming Languages | In Progress |
-| Java | Soon |
+| Java | In Progress |
 | Distributed Computing | Soon |
 | Operating Systems (Xv6) | In Progress |
 | Big Data | Soon |
