@@ -56,14 +56,27 @@
       }
     },
     {
+      "name": "Java(JDK 8)",
+      "status": "Ongoing",
+      "description": "Docker Image with OpenJDK 8.",
+      "details": {
+        "instructions": [
+          "Create a course directory",
+          "Download Makefile below (save as 'Makefile' without any extension)",
+          "Place the file in the course dir",
+          "Open terminal inside the course dir",
+          "Run 'make help' and follow the instructions"
+        ],
+        "downloadButton": {
+          "text": "Makefile",
+          "link": "https://github.com/gcallah/docker-for-ed/tree/master/docker_images/java"
+        }
+      }
+    },
+    {
       "name": "Distributed Computing",
       "status": "Coming Soon",
       "description": "Environment for designing distributed systems using Golang"
-    },
-    {
-      "name": "Java Environment",
-      "status": "Ongoing",
-      "description": "Java runtime environment"
     },
     {
       "name": "Programming for Big Data",
