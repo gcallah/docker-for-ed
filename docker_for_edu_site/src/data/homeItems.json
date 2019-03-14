@@ -69,7 +69,7 @@
         ],
         "downloadButton": {
           "text": "Makefile",
-          "link": "https://github.com/gcallah/docker-for-ed/tree/master/docker_images/java/MakeFile"
+          "link": "https://github.com/gcallah/docker-for-ed/tree/master/docker_images/java/Makefile"
         }
       }
     },
