@@ -14,7 +14,6 @@ WORKDIR /home
 
 # copy necessary code
 COPY run_sample.sh .
-COPY VERSION .
 COPY .bashrc .
 COPY .bash_profile .
 COPY Makefile .
