@@ -26,7 +26,7 @@ Working on docker setups for education.
 | Java | In Progress |
 | Distributed Computing | Soon |
 | Operating Systems (Xv6) | In Progress |
-| Big Data | Soon |
+| Big Data | In Progress |
 
 ## License
 

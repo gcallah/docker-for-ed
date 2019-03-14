@@ -5,6 +5,7 @@
 .env.production.local
 .vscode/
 *.log*
+*.idea*
 
 docker_for_edu_site/node_modules
 docker_for_edu_site/shrinkwrap.yaml
