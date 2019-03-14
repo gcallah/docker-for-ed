@@ -11,6 +11,8 @@ services:
 before_install:
     - "pip3 install --upgrade pip"
     - "pip install -r requirements.txt"
+    - "make pull-images"
+    - "make tag-images"
 install:
     - make build-images
 script:
