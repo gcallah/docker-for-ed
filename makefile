@@ -29,7 +29,6 @@ build-pl:
 build-docker-pl:
 	docker build -t $(DOCKER_USER)/pl docker_images/pl/
 
-# Again, I don't think the runs should be in the makefile:
 run-interactive-pl:
 	docker run --rm -it --name plcontainer $(DOCKER_USER)/pl bash
 
@@ -55,11 +54,11 @@ start-local:
 
 # Tests
 
-test-docker-pl:
-	pytest -v tests/test_docker-pl.py
+test-pl:
+	nose2 -Cvs tests test_docker-pl
 
 test-cpp:
-	pytest -v tests/test_docker-cpp.py
+	nose2 -Cvs tests test_docker-cpp
 
-run-all-tests:
-	pytest -v tests
+test:
+	nose2 -Cv tests

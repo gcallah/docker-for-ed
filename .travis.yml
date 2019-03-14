@@ -14,9 +14,9 @@ before_install:
 install:
     - make build-images
 script:
-    - "make run-all-tests"
+    - "make test"
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    - make build-docker-images
+    - "make build-docker-images"
     - "make push-images"
 notifications:
   slack: docker-for-ed:Oxi5wULOaqdybcPC9kdgdLwj

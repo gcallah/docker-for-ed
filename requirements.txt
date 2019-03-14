@@ -1,4 +1,4 @@
 docker
 six>=1.10.0
-pytest
+nose2
 unittest2

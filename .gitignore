@@ -6,6 +6,7 @@
 .vscode/
 *.log*
 *.idea*
+.coverage
 
 docker_for_edu_site/node_modules
 docker_for_edu_site/shrinkwrap.yaml
