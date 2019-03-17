@@ -16,20 +16,23 @@ class Home extends Component {
   }
 
   renderItems = () => {
-    let itemComponents = [];
-
-    for (var i = 0; i < homeItems.length; i = i + 2) {
-      itemComponents.push(
-        <Grid.Row key={i}>
-          <Grid.Column mobile={16} computer={8}>
-            {homeItems[i]}
-          </Grid.Column>
-          <Grid.Column mobile={16} computer={8}>
-            {homeItems[i + 1]}
-          </Grid.Column>
-        </Grid.Row>
-      );
-    }
+    const itemComponents = ((arr, size) => {
+      const renderGrid = []
+      for (var i = 0; i < arr.length; i += size){
+          const subArray = arr.slice(i, i+size)
+          const rowItems = subArray.map(item => 
+              <Grid.Column mobile={16} computer={8}>
+                  {item}
+              </Grid.Column>
+          )
+          renderGrid.push(
+              <Grid.Row  key = {"grid_row_" + renderGrid.length+1}>
+                  {rowItems}
+              </Grid.Row>
+          )
+      }
+      return renderGrid
+    })(homeItems, 2)
 
     return (
       <Grid stackable centered>
