@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-// import { Loader, Dimmer, Grid } from "semantic-ui-react"
+import { Button, Grid } from "semantic-ui-react"
 
 class EditForm extends Component {
     state = {
@@ -15,25 +15,65 @@ class EditForm extends Component {
     }
 
     async getComponents() {
-        /* Make a query to DB to return all the components. */
-        return [];
+        /* Make a query to DB to return all the components, returning hardcoded values for now. */
+        return ["Home", "Home-Items", "Menu", "Resources", "Team"];
     }
 
     renderComponents() {
         console.log(this.state.components)
-        const componentSelectors = this.state.components.map(component => (<button>{component}</button>))
-        return componentSelectors
+        const componentSelectors = ((arr, size) => {
+            const renderGrid = []
+            for (let i = 0; i < arr.length; i += size){
+                const subArray = arr.slice(i, i+size)
+                const rowButtons = subArray.map(component => 
+                    <Grid.Column mobile={12} computer={4}>
+                        <Button floated="left" onClick={() => this.selectComponent(component)} > {component} </Button>
+                    </Grid.Column>
+                )
+                renderGrid.push(
+                    <Grid.Row  key = {"grid_row_" + renderGrid.length+1}>
+                        {rowButtons}
+                    </Grid.Row>
+                )
+            }
+            return renderGrid
+        })(this.state.components, 3)
+        return (
+            <Grid column='equal' centeredj>
+                {componentSelectors}
+            </Grid>
+        )
+    }
+
+    async getComponentData(component) {
+        /* Retrieve JSON from the DB for the selected component. */
+        return {}
+    }
+
+    async selectComponent(component) {
+        this.setState({
+            selectedComponent: component,
+            componentData: await this.getComponentData(component)
+        })
     }
 
     render() {
         if(!this.state.selectedComponent) {
             return (
                 <div>
+                    <br />
+                    <h3 style={{"textAlign": "center"}}>Select the Component to Modify</h3>
+                    <br /><br />
                     {this.renderComponents()}
                 </div>
             )
         } else {
-            return <div></div>
+            return (
+                <form>
+                    <div>WIP!!</div>
+                    <button onClick={() => { window.location.pathname = "/edit"}}>Go Back to Components</button>
+                </form>
+            )
         }
     }   
 }
