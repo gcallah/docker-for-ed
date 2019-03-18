@@ -18,18 +18,18 @@ class Home extends Component {
   renderItems = () => {
     const itemComponents = ((arr, size) => {
       const renderGrid = []
-      for (var i = 0; i < arr.length; i += size){
-          const subArray = arr.slice(i, i+size)
-          const rowItems = subArray.map(item => 
-              <Grid.Column mobile={16} computer={8}>
-                  {item}
-              </Grid.Column>
-          )
-          renderGrid.push(
-              <Grid.Row  key = {"grid_row_" + renderGrid.length+1}>
-                  {rowItems}
-              </Grid.Row>
-          )
+      for (var i = 0; i < arr.length; i += size) {
+        const subArray = arr.slice(i, i + size)
+        const rowItems = subArray.map((item, id) =>
+          <Grid.Column key={id} mobile={16} computer={8}>
+            {item}
+          </Grid.Column>
+        )
+        renderGrid.push(
+          <Grid.Row key={"grid_row_" + renderGrid.length + 1}>
+            {rowItems}
+          </Grid.Row>
+        )
       }
       return renderGrid
     })(homeItems, 2)
