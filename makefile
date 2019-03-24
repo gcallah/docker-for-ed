@@ -67,7 +67,7 @@ push-pl:
 
 ## Java Image
 
-## Bid Data Image
+## Big Data Image
 
 
 # React gh-pages commands:
