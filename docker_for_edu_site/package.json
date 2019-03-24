@@ -4,15 +4,19 @@
   "private": true,
   "homepage": "https://vutsalsinghal.github.io/docker-for-ed",
   "dependencies": {
+    "koa": "^2.7.0",
+    "koa-basic-auth": "^4.0.0",
+    "koa-router": "^7.4.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-scripts": "2.1.5",
     "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.5",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.83.0"
   },
   "scripts": {
     "start": "react-scripts start",
+    "run-server": "node server.js",
     "build": "react-scripts build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
