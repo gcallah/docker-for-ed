@@ -12,8 +12,6 @@ RUN \
     chmod +x /usr/bin/cdh_startup_script.sh && \
     bash /tmp/cdh_installer.sh
 
-ADD docker_files/yarn-site.xml /etc/hadoop/conf/yarn-site.xml
-ADD docker_files/hbase-site.xml /etc/hbase/conf.dist/hbase-site.xml
 
 # private and public mapping
 EXPOSE 2181:2181
