@@ -10,7 +10,7 @@ const app = new Koa()
 const router = new Router()
 
 const editHandler = async (ctx) => {
-    console.log("REQUEST RECEIVED!")
+    console.log("Edit REQUEST RECEIVED!")
     ctx.status = 200
     ctx.body = {
         'data': 'Wait for it'
