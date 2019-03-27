@@ -14,7 +14,7 @@ RUN apk update && \
     libstdc++ && \
     rm -rf /var/cache/apk/*
 
-RUN apk add vim nano
+RUN apk add vim nano emacs
 
 # Set working dir
 WORKDIR /home

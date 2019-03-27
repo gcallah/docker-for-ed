@@ -26,6 +26,7 @@ printf "\e[0m\n"
 echo "You've the following editors installed:"
 echo "- nano"
 echo "- vim"
+echo "- emacs"
 echo
 echo "Use '<editor> <filename>' to open a file in an editor."
 echo

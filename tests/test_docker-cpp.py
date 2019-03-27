@@ -20,6 +20,11 @@ class TestEditors(unittest.TestCase):
         print("[INFO] Checking Nano installation")
         response = client.containers.run("cplusplus", command="which nano", remove=True, name="cppcontainer").decode("utf-8")
         self.assertEqual(response, "/usr/bin/nano\n", "Nano missing!")
+    
+    def test_emacs(self):
+        print("[INFO] Checking Nano installation")
+        response = client.containers.run("cplusplus", command="which emacs", remove=True, name="cppcontainer").decode("utf-8")
+        self.assertEqual(response, "/usr/bin/emacs\n", "Emacs missing!")
 
     def test_vim(self):
         print("[INFO] Checking vim installation")

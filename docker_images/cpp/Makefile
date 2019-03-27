@@ -4,15 +4,6 @@ run-interactive:
 run-sample:
 	docker run --rm cplusplus
 
-copy-to-container:
-	docker cp HW cppcontainer:/home/HW
-
-copy-from-container:
-	docker cp cppcontainer:/home/HW .
-
-save-hw:
-	docker cp cppcontainer:/home/HW .
-
 help:
 	@echo
 	@printf "\t\t\t\e[1mInstructions\e[0m (for initial setup only)\n\n"
