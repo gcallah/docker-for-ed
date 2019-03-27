@@ -18,15 +18,13 @@ RUN echo 'deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main' >> /
     rm -rf /var/cache/oracle-jdk${JAVA_VER}-installer
 
 #Install some editors and essentials
-RUN apt-get update && apt-get install -y emacs23-nox
-RUN apt-get install -y make
-RUN apt-get -yqq install vim nano
+RUN apt-get -yqq install vim nano make
 
 #Set as the default java
 RUN update-java-alternatives -s java-8-oracle
 
 RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> ~/.bashrc
- 
+
 #Clean up Apt
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 

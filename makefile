@@ -67,6 +67,24 @@ push-pl:
 
 ## Java Image
 
+build-java:
+	docker build -t java docker_images/java/ --cache-from $(DOCKER_USER)/java
+
+build-docker-java:
+	docker build -t $(DOCKER_USER)/java docker_images/java/ --cache-from $(DOCKER_USER)/java
+
+run-interactive-java:
+	docker run --rm -it --name javacontainer $(DOCKER_USER)/java bash
+
+pull-java:
+	docker pull $(DOCKER_USER)/java
+
+tag-java:
+	docker tag $(DOCKER_USER)/java java
+
+push-java:
+	docker push $(DOCKER_USER)/java
+
 ## Big Data Image
 
 
@@ -89,10 +107,17 @@ start-local:
 # Tests
 
 test-pl:
-	nose2 -Cvs tests test_docker-pl
+	pytest -v tests/test_docker-pl.py
 
 test-cpp:
-	nose2 -Cvs tests test_docker-cpp
+	pytest -v tests/test_docker-cpp.py
+
+test-os:
+	echo "test OS"
+
+test-java:
+	pytest -v tests/test_docker-java.py
+
 
 test:
 	nose2 -Cv tests
