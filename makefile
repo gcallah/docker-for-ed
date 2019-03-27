@@ -3,15 +3,15 @@ DOCKER_USER = gcallah
 
 # Docker commands:
 
-build-images: build-cpp build-pl
+build-images: build-cpp build-pl build-java
 
-build-docker-images: build-docker-cpp build-docker-pl
+build-docker-images: build-docker-cpp build-docker-pl build-docker-java
 
-pull-images: pull-cpp pull-pl
+pull-images: pull-cpp pull-pl pull-java
 
-tag-images: tag-cpp tag-pl
+tag-images: tag-cpp tag-pl tag-java
 
-push-images: push-cpp push-pl
+push-images: push-cpp push-pl push-java
 
 
 # For each image below, maintain the order:
@@ -112,12 +112,8 @@ test-pl:
 test-cpp:
 	pytest -v tests/test_docker-cpp.py
 
-test-os:
-	echo "test OS"
-
 test-java:
 	pytest -v tests/test_docker-java.py
-
 
 test:
 	nose2 -Cv tests
