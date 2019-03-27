@@ -13,7 +13,7 @@ class TestLanguage(unittest.TestCase):
         response = client.containers.run("java", command="which java", remove=True, name="javacontainer").decode("utf-8")
         self.assertEqual(response, "/usr/bin/java\n", "Java missing!")
         '''
-        response = client.containers.run("demo/oracle-java-8", command="java -version", remove=True, name="javacontainer").decode("utf-8")
+        response = client.containers.run("java", command="java -version", remove=True, name="javacontainer").decode("utf-8")
         self.assertEqual(response, "java version \"1.8.0_201\"\nJava(TM) SE Runtime Environment (build 1.8.0_201-b09)\nJava HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)\n", "no java installed!")
         '''
 

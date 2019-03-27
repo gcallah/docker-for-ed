@@ -15,5 +15,6 @@ docker_for_edu_site/pnpm-lock.yaml
 *__pycache__
 .pytest_cache
 *-lock.json
+*.backup
 
 docker_images/os/xv6-public

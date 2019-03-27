@@ -1,13 +1,20 @@
-FROM gcc
+FROM alpine
 
 ENV HOME /home
-ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get -yqq update
-#RUN apt-get -yqq upgrade
-RUN apt-get -yqq install build-essential tree
-RUN apt-get -yqq install curl gnupg git gdb clang-format
-RUN apt-get -yqq install vim nano
+RUN apk update && \
+    apk upgrade && \
+    apk --update add \
+    gcc \
+    g++ \
+    gdb \
+    build-base \
+    cmake \
+    bash \
+    libstdc++ && \
+    rm -rf /var/cache/apk/*
+
+RUN apk add vim nano
 
 # Set working dir
 WORKDIR /home

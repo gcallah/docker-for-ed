@@ -7,7 +7,7 @@ build-images: build-cpp build-pl build-java
 
 build-docker-images: build-docker-cpp build-docker-pl build-docker-java
 
-pull-images: pull-cpp pull-pl pull-java
+pull-images: pull-cpp pull-pl
 
 tag-images: tag-cpp tag-pl tag-java
 
@@ -115,5 +115,5 @@ test-cpp:
 test-java:
 	pytest -v tests/test_docker-java.py
 
-test:
+tests:
 	nose2 -Cv tests

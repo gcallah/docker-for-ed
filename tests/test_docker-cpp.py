@@ -11,15 +11,15 @@ class TestLanguage(unittest.TestCase):
     def test_cpp(self):
         print("[INFO] Checking gcc and gdb installation")
         response = client.containers.run("cplusplus", command="which gcc", remove=True, name="cppcontainer").decode("utf-8")
-        self.assertEqual(response, "/usr/local/bin/gcc\n", "gcc missing!")
-        response = client.containers.run("pyoey/cplusplus", command="which gdb", remove=True, name="cppcontainer").decode("utf-8")
+        self.assertEqual(response, "/usr/bin/gcc\n", "gcc missing!")
+        response = client.containers.run("cplusplus", command="which gdb", remove=True, name="cppcontainer").decode("utf-8")
         self.assertEqual(response, "/usr/bin/gdb\n", "gdb missing!")
 
 class TestEditors(unittest.TestCase):
     def test_nano(self):
         print("[INFO] Checking Nano installation")
         response = client.containers.run("cplusplus", command="which nano", remove=True, name="cppcontainer").decode("utf-8")
-        self.assertEqual(response, "/bin/nano\n", "Nano missing!")
+        self.assertEqual(response, "/usr/bin/nano\n", "Nano missing!")
 
     def test_vim(self):
         print("[INFO] Checking vim installation")
