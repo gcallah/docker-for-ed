@@ -9,7 +9,7 @@ build-docker-images: build-docker-cpp build-docker-pl build-docker-java
 
 pull-images: pull-cpp pull-pl
 
-tag-images: tag-cpp tag-pl tag-java
+tag-images: tag-cpp tag-pl
 
 push-images: push-cpp push-pl push-java
 
