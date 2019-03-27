@@ -118,5 +118,5 @@ test-os:
 test-java:
 	pytest -v tests/test_docker-java.py
 
-tests:
+tests: test-cpp test-os test-pl test-java
 	nose2 -Cv tests
