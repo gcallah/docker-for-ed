@@ -2,4 +2,5 @@ docker
 six>=1.10.0
 nose2
 pytest
+requests
 unittest2

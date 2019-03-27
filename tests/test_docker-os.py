@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 import docker
-import unittest2 as test
+import unittest2 as unittest
 
-print("\n---------------------------------Running tests on Docker xv6 image----------------------------------------\n")
+print("\n[INFO] Running tests for Docker Xv6 OS image...\n")
 
 dockerClient = docker.from_env()
 lsOutput = ".              1 1 512\
@@ -32,7 +32,7 @@ fork test OK"
 nanoOutput = "exec: fail\
 exec nano failed"
 
-class TestXV6(test.TestCase):
+class TestXV6(unittest.TestCase):
     def test_is_xv6_running(self):
         print("[INFO] Checking if XV6 was built and if kernel is running")
         # self.assertEqual(dockerClient.containers.run("xv6", command="ls", remove=True, name="xv6").decode("utf-8"), lsOutput)
@@ -40,4 +40,4 @@ class TestXV6(test.TestCase):
         # self.assertEqual(dockerClient.containers.run("xv6", command="nano", remove=True, name="xv6").decode("utf-8"), nanoOutput)
 
 if __name__ == '__main__':
-    test.main()
+    unittest.main()

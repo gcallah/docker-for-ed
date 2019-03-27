@@ -28,7 +28,7 @@ class TestEditors(unittest.TestCase):
         response = client.containers.run("java", command="which nano", remove=True, name="javacontainer").decode("utf-8")
         self.assertEqual(response, "/usr/bin/nano\n", "Nano missing!")
 
-#add tests for sample code
+# Add tests for sample code
 
 if __name__ == '__main__':
     unittest.main()

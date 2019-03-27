@@ -7,9 +7,9 @@ build-images: build-cpp build-pl build-java
 
 build-docker-images: build-docker-cpp build-docker-pl build-docker-java
 
-pull-images: pull-cpp pull-pl
+pull-images: pull-cpp pull-pl pull-java
 
-tag-images: tag-cpp tag-pl
+tag-images: tag-cpp tag-pl tag-java
 
 push-images: push-cpp push-pl push-java
 
@@ -111,6 +111,9 @@ test-pl:
 
 test-cpp:
 	pytest -v tests/test_docker-cpp.py
+
+test-os:
+	pytest -v tests/test_docker-os.py
 
 test-java:
 	pytest -v tests/test_docker-java.py
