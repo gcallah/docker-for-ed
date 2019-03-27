@@ -20,7 +20,7 @@ RUN echo 'deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main' >> /
 #Install some editors and essentials
 RUN apt-get update && apt-get install -y emacs23-nox
 RUN apt-get install -y make
-
+RUN apt-get -yqq install vim nano
 
 #Set as the default java
 RUN update-java-alternatives -s java-8-oracle
