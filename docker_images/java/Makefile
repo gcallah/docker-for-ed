@@ -1,11 +1,17 @@
 build-java8-image:
-	docker build -f Dockerfile -t demo/oracle-java:8 .
+	docker build -f Dockerfile -t demo/oracle-java-8 .
+
+run-interactive-java:
+	docker run --rm -it -v `pwd`:/home/HW --name javacontainer demo/oracle-java-8 bash
+
+run-interactive-java-windows:
+	winpty docker run --rm -it -v `pwd`:/home/HW --name javacontainer demo/oracle-java-8 bash
 
 compile-sample-HelloWorld:
-	docker run --rm -v `pwd`:/home demo/oracle-java:8 javac Main.java
+	docker run --rm -v `pwd`:/home demo/oracle-java-8 javac Main.java
 
 run-sample-HelloWorld:
-	docker run --rm -v `pwd`:/home demo/oracle-java:8 java Main
+	docker run --rm -v `pwd`:/home demo/oracle-java-8 java Main
 
 help:
 	@echo
@@ -19,4 +25,8 @@ help:
 	@echo "\e[1m> make instructions \e[0m\t- to print basic instructions (run from inside container)."
 	@echo "\e[1m> make build-java8-image \e[0m\t- builds a java8 image in the local docker repository."
 	@echo "\e[1m> make compile-sample-HelloWorld \e[0m\t- compiles a sample java8 source file to a .class file."
-	@echo "\e[1m> make compile-sample-HelloWorld \e[0m\t- compiles a sample java8 source file to a .class file."
+	@echo "\e[1m> make run-sample-HelloWorld \e[0m\t- runs a sample java8 file and outputs the result to stdout."
+	@echo "\e[1m> make run-interactive-java \e[0m\t- runs a shell terminal in interactive mode."
+	@echo "\e[2m> use window user use run-interactive-java-windows"
+
+
