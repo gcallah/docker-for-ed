@@ -1,5 +1,3 @@
-VERSION="$(cat VERSION)"
-
 source .profile
 
 printf "\n\t\t\e[1;4mWELCOME to \e[95mNYU\e[97m’s \e[34mPROGRAMMING LANGUAGES\e[97m ENVIRONMENT\n\n\e[0;1;3;2m"

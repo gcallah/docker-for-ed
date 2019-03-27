@@ -30,7 +30,6 @@ WORKDIR /root
 COPY run_sample.sh .
 COPY .welcome .
 COPY script.sh .
-COPY VERSION .
 COPY Makefile .
 ADD samples ./samples
 
