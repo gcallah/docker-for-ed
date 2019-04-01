@@ -3,8 +3,7 @@ const Router = require('koa-router')
 const auth = require('koa-basic-auth')
 
 const PORT = 8081
-const USERNAME = "docker4ed"
-const PASSWORD = "docker4ed"
+const { USERNAME, PASSWORD } = process.env
 
 const app = new Koa()
 const router = new Router()

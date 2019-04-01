@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "run-server": "node server.js",
+    "run-server": "USERNAME=docker4ed PASSWORD=docker4ed node server.js",
     "build": "react-scripts build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",

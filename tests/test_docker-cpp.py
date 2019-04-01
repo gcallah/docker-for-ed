@@ -22,7 +22,7 @@ class TestEditors(unittest.TestCase):
         self.assertEqual(response, "/usr/bin/nano\n", "Nano missing!")
     
     def test_emacs(self):
-        print("[INFO] Checking Nano installation")
+        print("[INFO] Checking Emacs installation")
         response = client.containers.run("cplusplus", command="which emacs", remove=True, name="cppcontainer").decode("utf-8")
         self.assertEqual(response, "/usr/bin/emacs\n", "Emacs missing!")
 
