@@ -16,7 +16,7 @@ class EditForm extends Component {
 
   async getComponents() {
     /* Make a query to DB to return all the components, returning hardcoded values for now. */
-    return ["Home", "Home-Items", "Menu", "Resources", "Team"];
+    return ["Home", "Home-Items", "Menu", "Resources", "Team"]
   }
 
   renderComponents() {
