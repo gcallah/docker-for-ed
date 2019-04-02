@@ -1,13 +1,13 @@
 {
   "main.css": "/docker-for-ed/static/css/main.ed45a0da.chunk.css",
-  "main.js": "/docker-for-ed/static/js/main.8e410ab1.chunk.js",
-  "main.js.map": "/docker-for-ed/static/js/main.8e410ab1.chunk.js.map",
+  "main.js": "/docker-for-ed/static/js/main.5f842a5f.chunk.js",
+  "main.js.map": "/docker-for-ed/static/js/main.5f842a5f.chunk.js.map",
   "runtime~main.js": "/docker-for-ed/static/js/runtime~main.c4d60803.js",
   "runtime~main.js.map": "/docker-for-ed/static/js/runtime~main.c4d60803.js.map",
   "static/js/2.5c86c933.chunk.js": "/docker-for-ed/static/js/2.5c86c933.chunk.js",
   "static/js/2.5c86c933.chunk.js.map": "/docker-for-ed/static/js/2.5c86c933.chunk.js.map",
   "index.html": "/docker-for-ed/index.html",
-  "precache-manifest.940dfa2a94678a0141b8c0f7d1db69cf.js": "/docker-for-ed/precache-manifest.940dfa2a94678a0141b8c0f7d1db69cf.js",
+  "precache-manifest.8ee050740930e1c0b12971e44a490d94.js": "/docker-for-ed/precache-manifest.8ee050740930e1c0b12971e44a490d94.js",
   "service-worker.js": "/docker-for-ed/service-worker.js",
   "static/css/main.ed45a0da.chunk.css.map": "/docker-for-ed/static/css/main.ed45a0da.chunk.css.map"
 }
