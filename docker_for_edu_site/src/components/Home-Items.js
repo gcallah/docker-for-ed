@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Button, Modal, Header, List } from "semantic-ui-react";
-import * as data from "../data/homeItems.json";
+import * as data from "../data/homeitems.json";
 
 const homeItems = data.items.map((item, idx) => {
   return (

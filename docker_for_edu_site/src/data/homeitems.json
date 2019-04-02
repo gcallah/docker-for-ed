@@ -14,7 +14,7 @@
         ],
         "downloadButton": {
           "text": "Makefile",
-          "link": "https://raw.githubusercontent.com/vutsalsinghal/docker-for-ed/master/docker_images/cpp/Makefile"
+          "link": "https://raw.githubusercontent.com/gcallah/docker-for-ed/master/docker_images/cpp/Makefile"
         }
       }
     },
@@ -32,7 +32,7 @@
         ],
         "downloadButton": {
           "text": "Makefile",
-          "link": "https://raw.githubusercontent.com/vutsalsinghal/docker-for-ed/master/docker_images/pl/Makefile"
+          "link": "https://raw.githubusercontent.com/gcallah/docker-for-ed/master/docker_images/pl/Makefile"
         }
       }
     },
@@ -51,7 +51,7 @@
         ],
         "downloadButton": {
           "text": "Makefile",
-          "link": "https://raw.githubusercontent.com/vutsalsinghal/docker-for-ed/master/docker_images/os/Makefile"
+          "link": "https://raw.githubusercontent.com/gcallah/docker-for-ed/master/docker_images/os/Makefile"
         }
       }
     },
