@@ -35,10 +35,10 @@ run-interactive-cpp:
 	docker run --rm -it --name cppcontainer $(DOCKER_USER)/cplusplus bash
 
 pull-cpp:
-	docker pull $(DOCKER_USER)/cplusplus
+	docker pull $(DOCKER_USER)/cplusplus || true
 
 tag-cpp:
-	docker tag $(DOCKER_USER)/cplusplus cplusplus
+	docker tag $(DOCKER_USER)/cplusplus cplusplus || true
 
 push-cpp:
 	docker push $(DOCKER_USER)/cplusplus
@@ -55,10 +55,10 @@ run-interactive-pl:
 	docker run --rm -it --name plcontainer $(DOCKER_USER)/pl bash
 
 pull-pl:
-	docker pull $(DOCKER_USER)/pl
+	docker pull $(DOCKER_USER)/pl || true
 
 tag-pl:
-	docker tag $(DOCKER_USER)/pl pl
+	docker tag $(DOCKER_USER)/pl pl || true
 
 push-pl:
 	docker push $(DOCKER_USER)/pl
@@ -77,10 +77,10 @@ run-interactive-java:
 	docker run --rm -it --name javacontainer $(DOCKER_USER)/java bash
 
 pull-java:
-	docker pull $(DOCKER_USER)/java
+	docker pull $(DOCKER_USER)/java || true
 
 tag-java:
-	docker tag $(DOCKER_USER)/java java
+	docker tag $(DOCKER_USER)/java java || true
 
 push-java:
 	docker push $(DOCKER_USER)/java
