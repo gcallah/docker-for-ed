@@ -8,11 +8,12 @@ echo "You've the following languages installed:"
 echo "- C, C++"
 echo "- Python3.6"
 echo "- Haskel"
-echo "- Common Lisp"
+echo "- MIT Scheme"
 echo
 echo "You've the following editors installed:"
 echo "- nano"
 echo "- vim"
+echo "- emacs"
 echo
 echo "Use '<editor> <filename>' to open a file in an editor."
 echo
