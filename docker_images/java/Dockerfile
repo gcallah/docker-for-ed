@@ -18,7 +18,7 @@ RUN echo 'deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main' >> /
     rm -rf /var/cache/oracle-jdk${JAVA_VER}-installer
 
 #Install some editors and essentials
-RUN apt-get -yqq install vim nano make
+RUN apt-get -yqq install vim nano make emacs
 
 #Set as the default java
 RUN update-java-alternatives -s java-8-oracle
