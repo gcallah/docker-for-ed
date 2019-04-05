@@ -34,6 +34,11 @@ class TestEditors(unittest.TestCase):
         self.assertEqual(response, "/usr/bin/emacs\n", "Nano missing!")
 
 # Add tests for sample code
+class TestSampleCode(unittest.TestCase):
+    def test_sample(self):
+        print("[INFO] Testing sample java code ")
+        response = client.containers.run("java", command="java Test", remove=True, name="javacontainer").decode("utf-8")
+        self.assertEqual(response, "Hello World\n", "Error in Hello World sample!")
 
 if __name__ == '__main__':
     unittest.main()

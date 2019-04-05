@@ -31,5 +31,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 #Setting the working directory
 WORKDIR /home
 
+COPY ./Samples/Test.class ./
+
 #baseimage's init system
 CMD ["/sbin/my_init"]
