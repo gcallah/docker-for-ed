@@ -2,6 +2,7 @@ const Koa = require('koa')
 const Router = require('koa-router')
 const auth = require('koa-basic-auth')
 const bodyParser = require('koa-bodyparser')
+const cors = require('koa-cors')
 const fs = require('fs')
 
 const PORT = 8081
@@ -10,6 +11,12 @@ const { USERNAME, PASSWORD } = process.env
 const app = new Koa()
 const router = new Router()
 app.use(bodyParser())
+app.use(cors({
+  'origin': '*', //TODO: Limit Origins?
+  'credentials': 'true',
+  'allowMethods': 'POST,GET,OPTIONS,PUT,DELETE',
+  'allowHeaders': 'Accept,Content-Type,Content-Length,Accept-Encoding,X-CSRF-Token,Authorization'
+}))
 
 const getComponent = async (ctx) => {
   // TODO: Add Error Handling
@@ -21,9 +28,9 @@ const getComponent = async (ctx) => {
 
   if(!componentRequested) {
     const componentNames = components.map(component => {
-        const name = component.split(".json")[0]
-        const camelCasedName = name.charAt(0).toUpperCase() + name.slice(1)
-        return camelCasedName
+      const name = component.split(".json")[0]
+      const camelCasedName = name.charAt(0).toUpperCase() + name.slice(1)
+      return camelCasedName
     })
     ctx.status = 200
     ctx.body = {
