@@ -43,11 +43,21 @@
       "content":[
         {
           "link": "https://docs.docker.com/docker-for-mac/install/",
-          "text": "macOS"
+          "text": "macOS and Linux"
         },
         {
           "link": "https://docs.docker.com/docker-for-windows/install//",
           "text": "Windows"
+        }
+      ]
+    },
+    {
+      "sectionId": 4,
+      "subheading": "Why Docker in Education?",
+      "content":[
+        {
+          "link": "https://blog.docker.com/2014/04/docker-in-education-interview/",
+          "text": "Docker for Education"
         }
       ]
     }
