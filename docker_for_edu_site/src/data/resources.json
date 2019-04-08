@@ -36,6 +36,20 @@
           "text": "UNIX Command Line Ref"
         }
       ]
+    },
+    {
+      "sectionId": 3,
+      "subheading": "Docker Installation & Requirements",
+      "content":[
+        {
+          "link": "https://docs.docker.com/docker-for-mac/install/",
+          "text": "macOS"
+        },
+        {
+          "link": "https://docs.docker.com/docker-for-windows/install//",
+          "text": "Windows"
+        }
+      ]
     }
   ]
 }
