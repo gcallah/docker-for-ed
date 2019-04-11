@@ -102,9 +102,9 @@ run-docs:
 # React gh-pages commands:
 
 build-docs-local:
-	rm -r static && \
-	rm precache-manifest* && \
-	cd docker_for_edu_site && \
+	- rm -r static || true
+	- rm precache-manifest* || true
+	- cd docker_for_edu_site && \
 	npm run build && \
 	cp favicon.ico build && \
 	cp -r build/* .. && \
