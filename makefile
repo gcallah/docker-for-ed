@@ -88,9 +88,20 @@ push-java:
 ## Big Data Image
 
 
+## Docker For Edu React docs
+
+build-docs-image:
+	docker build -t d4ed-image docker_for_edu_site
+
+run-docs-interactive:
+	docker run --rm -it --name d4ed-container d4ed-image sh
+
+run-docs:
+	docker run --rm -it -p 3000:3000 --name d4ed-container d4ed-image
+
 # React gh-pages commands:
 
-build-react:
+build-docs-local:
 	rm -r static && \
 	rm precache-manifest* && \
 	cd docker_for_edu_site && \
@@ -99,7 +110,7 @@ build-react:
 	cp -r build/* .. && \
 	cd ..
 
-start-local:
+run-docs-local:
 	cd docker_for_edu_site && \
 	npm start
 
