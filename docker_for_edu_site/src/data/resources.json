@@ -57,15 +57,51 @@
       "content":[
         {
           "link": "",
-          "text": "Free Tools: eliminating the need for students to install anything locally, thus saving a valuable class time."
+          "text": "Docker is a free tool thus eliminating the need for students to install anything locally and saving valuable time."
         },
         {
           "link": "",
-          "text": "Resources: the most up to date presentations, hands-on labs, workshops etc. on every topic for every skill level are available through Docker."
+          "text": "Docker has the most up to date presentations, hands-on labs, workshops etc. on every topic and for every skill level."
         },
         {
           "link": "",
-          "text": "Support and recognition: You will have a dedicated contact at Docker to help you through the process and also be welcomed into the online Docker Teachers community where you can collaborate and learn from other educators."
+          "text": "Docker provides a dedicated support to help you through the process. It also has an online Docker Teachers community where you can collaborate and learn from other educators."
+        },
+        {
+          "link": "https://blog.docker.com/2017/09/docker-higher-education-tools-resources-teachers/",
+          "text": "For more information..."
+        }
+      ]
+    },
+    {
+      "sectionId": 5,
+      "subheading": "Benefits of Docker for Students",
+      "content":[
+        {
+          "link": "",
+          "text": "Docker is one of the most important skills to learn if you want to advance in a career in tech."
+        },
+        {
+          "link": "",
+          "text": "Students can just start coding instead of spending time setting up the environment. Since every member in group will have the same environment so Docker eliminates any ‘works on my machine’ issues."
+        },
+        {
+          "link": "",
+          "text": "Docker allows you to easily build applications with a modern microservices architecture also greatly enhancing the security of your applications."
+        },
+        {
+          "link": "https://blog.docker.com/2017/05/announcing-docker-student-developer-kit-campus-ambassador-program/",
+          "text": "For more information..."
+        }
+      ]
+    },
+    {
+      "sectionId": 6,
+      "subheading": "Docker vs VMs",
+      "content": [
+        {
+          "link": "https://www.backblaze.com/blog/vm-vs-containers/",
+          "text": "Comparison between Containers and VMs"
         }
       ]
     }
