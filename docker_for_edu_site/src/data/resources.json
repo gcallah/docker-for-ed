@@ -39,6 +39,16 @@
     },
     {
       "sectionId": 3,
+      "subheading": "Build Tools",
+      "content": [
+        {
+          "link": "http://www.thedevopscourse.com/devops/build",
+          "text": "Devops course website : Automating Build"
+        }
+      ]
+    },
+    {
+      "sectionId": 4,
       "subheading": "Docker Installation & Requirements",
       "content":[
         {
@@ -52,7 +62,7 @@
       ]
     },
     {
-      "sectionId": 4,
+      "sectionId": 5,
       "subheading": "Benefits of Docker for Teachers",
       "content":[
         {
