@@ -53,11 +53,19 @@
     },
     {
       "sectionId": 4,
-      "subheading": "Why Docker in Education?",
+      "subheading": "Benefits of Docker for Teachers",
       "content":[
         {
-          "link": "https://blog.docker.com/2014/04/docker-in-education-interview/",
-          "text": "Docker for Education"
+          "link": "",
+          "text": "Free Tools: eliminating the need for students to install anything locally, thus saving a valuable class time."
+        },
+        {
+          "link": "",
+          "text": "Resources: the most up to date presentations, hands-on labs, workshops etc. on every topic for every skill level are available through Docker."
+        },
+        {
+          "link": "",
+          "text": "Support and recognition: You will have a dedicated contact at Docker to help you through the process and also be welcomed into the online Docker Teachers community where you can collaborate and learn from other educators."
         }
       ]
     }
