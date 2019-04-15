@@ -1,6 +1,6 @@
 FROM alpine
 
-ENV HOME /home
+ENV ENV="/etc/profile"
 
 RUN apk update && \
     apk upgrade && \
@@ -8,10 +8,9 @@ RUN apk update && \
     gcc \
     g++ \
     gdb \
-    build-base \
-    cmake \
+    make \
     bash \
-    libstdc++ && \
+    clang && \
     rm -rf /var/cache/apk/*
 
 RUN apk add vim nano emacs
@@ -21,12 +20,12 @@ WORKDIR /home
 
 # copy necessary code
 COPY run_sample.sh .
-COPY .bashrc .
-COPY .bash_profile .
-COPY Makefile .
+COPY .ashrc .
+COPY makefile .
 ADD samples ./samples
 
 RUN chmod 755 run_sample.sh
+RUN cat .ashrc >> "$ENV"
 
 # run cmd
 CMD ["./run_sample.sh"]

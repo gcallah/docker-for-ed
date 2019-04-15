@@ -32,7 +32,7 @@ build-docker-cpp:
 	docker build -t $(DOCKER_USER)/cplusplus docker_images/cpp/ --cache-from $(DOCKER_USER)/cplusplus
 
 run-interactive-cpp:
-	docker run --rm -it --name cppcontainer $(DOCKER_USER)/cplusplus bash
+	docker run --rm -it --name cppcontainer $(DOCKER_USER)/cplusplus sh
 
 pull-cpp:
 	docker pull $(DOCKER_USER)/cplusplus || true
@@ -52,7 +52,7 @@ build-docker-pl:
 	docker build -t $(DOCKER_USER)/pl docker_images/pl/ --cache-from $(DOCKER_USER)/pl
 
 run-interactive-pl:
-	docker run --rm -it --name plcontainer $(DOCKER_USER)/pl bash
+	docker run --rm -it --name plcontainer $(DOCKER_USER)/pl sh
 
 pull-pl:
 	docker pull $(DOCKER_USER)/pl || true
