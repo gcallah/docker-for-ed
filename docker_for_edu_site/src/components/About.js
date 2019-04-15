@@ -4,11 +4,10 @@ import { Loader, Dimmer, Grid } from "semantic-ui-react";
 class About extends Component {
   state = {
     msg: '',
-    loadingData: false,
+    loadingData: true,
   }
 
   async componentDidMount() {
-    this.setState({ loadingData: true });
     document.title = "Docker For Edu | About";
     this.setState({ loadingData: false });
   }

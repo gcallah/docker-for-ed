@@ -13,10 +13,8 @@ class Home extends Component {
   }
 
   async componentDidMount() {
-    this.setState({ loadingData: true });
-    let response = await axios.get(`${domain}/get/home`)
+    const response = await axios.get(`${domain}/get/home`)
     const { result: homeData } = response.data
-    console.log(response, homeData)
     document.title = homeData.title;
     this.setState({ loadingData: false, homeData, homeItems: await setupHomeItems() })
   }
