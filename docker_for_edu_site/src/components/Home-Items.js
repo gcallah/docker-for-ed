@@ -38,9 +38,8 @@ async function setupHomeItems() {
       </Card>
     )
   });
-  console.log(homeItems)
   return homeItems
 }
 
 
-export default setupHomeItems;
+export default setupHomeItems

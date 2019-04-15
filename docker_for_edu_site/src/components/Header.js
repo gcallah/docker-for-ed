@@ -1,9 +1,14 @@
 import React from 'react';
 import { Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import * as data from "../data/menu.json";
+import axios from 'axios';
 
-export default () => {
+async function setupMenu() {
+  const domain = 'http://localhost:8081'
+  
+  const response = await axios.get(`${domain}/get/menu`)
+  const { result: data } = response.data
+
   const MenuItems = data.dataItems.map((item, idx) => <Menu.Item key={"menuItem_"+idx}><Link to={item.link}>{item.name}</Link></Menu.Item>)
   return (
     <Menu style={{ marginTop: '0px', }} size={'large'}>
@@ -14,3 +19,5 @@ export default () => {
     </Menu>
   );
 };
+
+export default setupMenu
