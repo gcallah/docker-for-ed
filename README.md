@@ -5,6 +5,7 @@
 </p>
 
 [![Build Status](https://travis-ci.com/gcallah/docker-for-ed.svg?branch=master)](https://travis-ci.com/gcallah/docker-for-ed)
+[![Repo Size](https://img.shields.io/github/repo-size/gcallah/docker-for-ed.svg)](https://github.com/gcallah/docker-for-ed)
 
 Working on docker setups for education.
 
@@ -19,10 +20,10 @@ Working on docker setups for education.
 
 ## Docker Images
 
-| Name | Status|
-|------|------|
-| C++ | In Progress |
-| Programming Languages | In Progress |
+| Name | Status| Downloads |
+|------|------|-----------|
+| C++ | latest | [![Docker Pulls](https://img.shields.io/docker/pulls/gcallah/cplusplus.svg)](https://hub.docker.com/r/gcallah/cplusplus) |
+| Programming Languages | latest | [![Docker Pulls](https://img.shields.io/docker/pulls/gcallah/pl.svg)](https://hub.docker.com/r/gcallah/pl)|
 | Java | In Progress |
 | Distributed Computing | Soon |
 | Operating Systems (Xv6) | In Progress |
