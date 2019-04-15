@@ -4,6 +4,7 @@ import axios from 'axios'
 
 const domain = 'http://localhost:8081'
 class Resources extends Component {
+  
   state = {
     msg: '',
     loadingData: true,
@@ -11,10 +12,8 @@ class Resources extends Component {
   }
 
   async componentDidMount() {
-    this.setState({ loadingData: true });
     const response = await axios.get(`${domain}/get/resources`)
     const {result: data} = response.data
-    console.log(data)
     document.title = data.title;
     this.setState({ loadingData: false, data });
   }

@@ -15,11 +15,11 @@ class Layout extends Component {
 
   render() {
     if (this.state.loadingData) {
-      return (<div>{this.props.children}</div>)
+      return (<div></div>)
     }
     return (
       <Container>
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"></link>
+        
         { this.state.Header }
         {this.props.children}
       </Container>
