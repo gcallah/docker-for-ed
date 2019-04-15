@@ -4,8 +4,9 @@
   <img src="https://raw.githubusercontent.com/vutsalsinghal/docker-for-ed/master/docker_for_edu_site/favicon.ico">
 </p>
 
-[![Build Status](https://travis-ci.com/gcallah/docker-for-ed.svg?branch=master)](https://travis-ci.com/gcallah/docker-for-ed)
-[![Repo Size](https://img.shields.io/github/repo-size/gcallah/docker-for-ed.svg)](https://github.com/gcallah/docker-for-ed)
+[![Build Status](https://img.shields.io/travis/com/gcallah/docker-for-ed/master.svg?style=for-the-badge)](https://travis-ci.com/gcallah/docker-for-ed)
+[![License](https://img.shields.io/github/license/gcallah/docker-for-ed.svg?style=for-the-badge)](https://github.com/gcallah/docker-for-ed/blob/master/LICENSE)
+[![Repo Size](https://img.shields.io/github/repo-size/gcallah/docker-for-ed.svg?style=for-the-badge)](https://github.com/gcallah/docker-for-ed)
 
 Working on docker setups for education.
 
