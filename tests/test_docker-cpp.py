@@ -14,6 +14,12 @@ class TestLanguage(unittest.TestCase):
         self.assertEqual(response, "/usr/bin/gcc\n", "gcc missing!")
         response = client.containers.run("cplusplus", command="which gdb", remove=True, name="cppcontainer").decode("utf-8")
         self.assertEqual(response, "/usr/bin/gdb\n", "gdb missing!")
+    def test_clang(self):
+        print("[INFO] Checking clang and clang-format installation")
+        response = client.containers.run("cplusplus", command="which clang", remove=True, name="cppcontainer").decode("utf-8")
+        self.assertEqual(response, "/usr/bin/clang\n", "clang missing!")
+        response = client.containers.run("cplusplus", command="which clang-format", remove=True, name="cppcontainer").decode("utf-8")
+        self.assertEqual(response, "/usr/bin/clang-format\n", "clang-format missing!")
 
 class TestEditors(unittest.TestCase):
     def test_nano(self):
