@@ -22,23 +22,24 @@ RUN apk update && \
     g++ \
     bash \
     ghc \
+    make \
     vim \
     nano \
     emacs \
     rm -rf /var/cache/apk/*
 
 # Set working dir
-WORKDIR /root
+WORKDIR /home
+ENV ENV="/etc/profile"
 
 # copy necessary code
 COPY run_sample.sh .
-COPY .welcome .
-COPY script.sh .
-COPY Makefile .
+COPY .ashrc .
+COPY makefile .
 ADD samples ./samples
 
 RUN chmod 755 run_sample.sh
-RUN bash script.sh
+RUN cat .ashrc >> "$ENV"
 
 # run cmd
 CMD ["./run_sample.sh"]
