@@ -1,13 +1,13 @@
 {
   "main.css": "/docker-for-ed/static/css/main.ed45a0da.chunk.css",
-  "main.js": "/docker-for-ed/static/js/main.5f842a5f.chunk.js",
-  "main.js.map": "/docker-for-ed/static/js/main.5f842a5f.chunk.js.map",
+  "main.js": "/docker-for-ed/static/js/main.1d2b0278.chunk.js",
+  "main.js.map": "/docker-for-ed/static/js/main.1d2b0278.chunk.js.map",
   "runtime~main.js": "/docker-for-ed/static/js/runtime~main.c4d60803.js",
   "runtime~main.js.map": "/docker-for-ed/static/js/runtime~main.c4d60803.js.map",
-  "static/js/2.5c86c933.chunk.js": "/docker-for-ed/static/js/2.5c86c933.chunk.js",
-  "static/js/2.5c86c933.chunk.js.map": "/docker-for-ed/static/js/2.5c86c933.chunk.js.map",
+  "static/js/2.99acadaa.chunk.js": "/docker-for-ed/static/js/2.99acadaa.chunk.js",
+  "static/js/2.99acadaa.chunk.js.map": "/docker-for-ed/static/js/2.99acadaa.chunk.js.map",
   "index.html": "/docker-for-ed/index.html",
-  "precache-manifest.8ee050740930e1c0b12971e44a490d94.js": "/docker-for-ed/precache-manifest.8ee050740930e1c0b12971e44a490d94.js",
+  "precache-manifest.5d7fc8b1718bb873b33b94972a33dbf4.js": "/docker-for-ed/precache-manifest.5d7fc8b1718bb873b33b94972a33dbf4.js",
   "service-worker.js": "/docker-for-ed/service-worker.js",
   "static/css/main.ed45a0da.chunk.css.map": "/docker-for-ed/static/css/main.ed45a0da.chunk.css.map"
 }
