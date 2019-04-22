@@ -25,7 +25,7 @@ Working on docker setups for education.
 |------|------|-----------|
 | C++ | latest | [![Docker Pulls](https://img.shields.io/docker/pulls/gcallah/cplusplus.svg)](https://hub.docker.com/r/gcallah/cplusplus) |
 | Programming Languages | latest | [![Docker Pulls](https://img.shields.io/docker/pulls/gcallah/pl.svg)](https://hub.docker.com/r/gcallah/pl)|
-| Java | In Progress |
+| Java | In Progress | [![Docker Pulls](https://img.shields.io/docker/pulls/gcallah/java.svg)](https://hub.docker.com/r/gcallah/java)|
 | Distributed Computing | Soon |
 | Operating Systems (Xv6) | In Progress |
 | Big Data | In Progress |
