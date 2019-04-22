@@ -2,7 +2,7 @@
   "name": "docker_for_edu_site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vutsalsinghal.github.io/docker-for-ed",
+  "homepage": "https://gcallah.github.io/docker-for-ed",
   "dependencies": {
     "axios": "^0.18.0",
     "koa": "^2.7.0",
