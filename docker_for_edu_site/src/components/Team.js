@@ -1,19 +1,17 @@
-import React, { Component } from "react"
-import { Loader, Dimmer, Grid, List } from "semantic-ui-react"
-import axios from 'axios'
+import React, { Component } from "react";
+import { Loader, Dimmer, Grid, List } from "semantic-ui-react";
+import * as data from "../data/team.json";
 
 class Team extends Component {
   state = {
     msg: '',
-    loadingData: true,
-    data: {}
+    loadingData: false,
   }
 
   async componentDidMount() {
-    const domain = 'http://localhost:8081'
-    const response = await axios.get(`${domain}/get/team`)
-    const { result: data } = response.data
-    this.setState({ loadingData: false, data });
+    this.setState({ loadingData: true });
+    document.title = data.title;
+    this.setState({ loadingData: false });
   }
 
   render() {
@@ -24,7 +22,7 @@ class Team extends Component {
         </Dimmer>
       );
     }
-    const sections = this.state.data.items.map(section => {
+    const sections = data.items.map(section => {
       return (
         <div key={"team_section_" + section.sectionId}>
           {section.subheading && <h3>{section.subheading}</h3>}

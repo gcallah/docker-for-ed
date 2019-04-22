@@ -1,22 +1,18 @@
 import React, { Component } from "react";
 import { Loader, Dimmer, Grid } from "semantic-ui-react";
-import setupHomeItems from "./Home-Items";
-import axios from 'axios';
+import homeItems from "./Home-Items";
+import * as data from "../data/home.json";
 
-const domain = "http://localhost:8081"
 class Home extends Component {
   state = {
     msg: '',
     loadingData: false,
-    homeData: {},
-    homeItems: {}
   }
 
   async componentDidMount() {
-    const response = await axios.get(`${domain}/get/home`)
-    const { result: homeData } = response.data
-    document.title = homeData.title;
-    this.setState({ loadingData: false, homeData, homeItems: await setupHomeItems() })
+    this.setState({ loadingData: true });
+    document.title = data.title;
+    this.setState({ loadingData: false });
   }
 
   renderItems = () => {
@@ -36,7 +32,7 @@ class Home extends Component {
         )
       }
       return renderGrid
-    })(this.state.homeItems, 2)
+    })(homeItems, 2)
 
     return (
       <Grid stackable centered>
@@ -57,7 +53,7 @@ class Home extends Component {
     return (
       <div>
         <br />
-        <h1 style={{ "textAlign": "center" }}>{this.state.homeData.heading}</h1>
+        <h1 style={{ "textAlign": "center" }}>{data.heading}</h1>
         <br /><br />
         {this.renderItems()}
         <br /><br />
