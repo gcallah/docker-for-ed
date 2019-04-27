@@ -10,6 +10,8 @@
 
 Working on docker setups for education.
 
+- Site available at [gcallah.github.io/docker-for-ed](https://gcallah.github.io/docker-for-ed/#/)
+
 ## Instructions
 
 ### For React gh-pages site:
