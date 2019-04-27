@@ -91,7 +91,7 @@ push-java:
 ## Docker For Edu React docs
 
 build-docs-image:
-	docker build -t d4ed-image docker_for_edu_site
+	docker build -t d4ed-image frontend
 
 run-docs-interactive:
 	docker run --rm -it --name d4ed-container d4ed-image sh
@@ -104,14 +104,14 @@ run-docs:
 build-docs-local:
 	- rm -r static || true
 	- rm precache-manifest* || true
-	- cd docker_for_edu_site && \
+	- cd frontend && \
 	npm run build && \
 	cp favicon.ico build && \
 	cp -r build/* .. && \
 	cd ..
 
 run-docs-local:
-	cd docker_for_edu_site && \
+	cd frontend && \
 	npm start
 
 
