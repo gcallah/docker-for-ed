@@ -6,12 +6,15 @@
 .vscode/
 *.log*
 *.idea*
-.coverage
+*coverage
 
 frontend/node_modules*
 frontend/shrinkwrap.yaml
 frontend/pnpm-lock.yaml
+backend/mysite/settings.py
 
+*migrations
+*.sqlite3
 *__pycache__
 .pytest_cache
 *-lock.json
