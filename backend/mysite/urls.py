@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from docker4edu.views import register, login, logout
+from docker4edu.views import register, login, logout, get
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register', register.page, name='register'),
     path('login', login.page, name='login'),
     path('logout', logout.page, name='logout'),
+    path('get', get.component, name='get'),
 ]
