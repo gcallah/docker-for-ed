@@ -1,16 +1,11 @@
 FROM ubuntu:18.04
 
-ADD docker_files/cdh_installer.sh /tmp/cdh_installer.sh
-ADD docker_files/install_cloudera_repositories.sh /tmp/install_cloudera_repositories.sh
-
 ADD docker_files/cdh_startup_script.sh /usr/bin/cdh_startup_script.sh
 
 ENV TERM xterm
 
 RUN \
-    chmod +x /tmp/cdh_installer.sh && \
-    chmod +x /usr/bin/cdh_startup_script.sh && \
-    bash /tmp/cdh_installer.sh
+    chmod +x /usr/bin/cdh_startup_script.sh
 
 
 # private and public mapping
