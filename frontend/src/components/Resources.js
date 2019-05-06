@@ -1,17 +1,21 @@
 import React, { Component } from "react";
 import { Loader, Dimmer, Grid, List } from "semantic-ui-react";
-import * as data from "../data/resources.json";
+import axios from 'axios'
 
 class Resources extends Component {
+  
   state = {
     msg: '',
-    loadingData: false,
+    loadingData: true,
+    data: {}
   }
-
+  
   async componentDidMount() {
-    this.setState({ loadingData: true });
+    const domain = window.location.hostname.includes('localhost') ? 'http://localhost:8000' : 'https://docker4ed.pythonanywhere.com'
+    const response = await axios.get(`${domain}/get?component=resources`)
+    const {result: data} = response.data
     document.title = data.title;
-    this.setState({ loadingData: false });
+    this.setState({ loadingData: false, data });
   }
 
   render() {
@@ -22,7 +26,7 @@ class Resources extends Component {
         </Dimmer>
       );
     }
-    const sections = data.items.map(section => {
+    const sections = this.state.data.items.map(section => {
       return (
         <div key={"resources_section_" + section.sectionId}>
           {section.subheading && <h3>{section.subheading}</h3>}
@@ -38,7 +42,7 @@ class Resources extends Component {
       <div>
         <Grid stackable reversed="mobile">
           <Grid.Column mobile={16} computer={8}>
-            <h2>Resources</h2>
+            <h2>{this.state.data.title}</h2>
             {sections}
           </Grid.Column>
         </Grid>
