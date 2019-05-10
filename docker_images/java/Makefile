@@ -2,7 +2,8 @@ build-java8-image:
 	docker build -f Dockerfile -t gcallah/oracle-java-8 .
 
 run-interactive-java:
-	docker run --rm -it -v `pwd`:/home --name javacontainer gcallah/oracle-java-8 bash
+	- docker pull gcallah/oracle-java-8
+	- docker run --rm -it -v `pwd`:/home --name javacontainer gcallah/oracle-java-8 bash
 
 compile-sample-HelloWorld:
 	docker run --rm -v `pwd`/Samples:/home gcallah/oracle-java-8 javac Test.java
@@ -19,7 +20,8 @@ copy-from-container:
 #windows support
 
 run-interactive-java-windows:
-	winpty docker run --rm -it -v `pwd`:/home --name javacontainer gcallah/oracle-java-8 bash
+	- docker pull gcallah/oracle-java-8
+	- winpty docker run --rm -it -v `pwd`:/home --name javacontainer gcallah/oracle-java-8 bash
 
 compile-sample-HelloWorld:
 	winpty docker run --rm -v `pwd`/Samples:/home gcallah/oracle-java-8 javac Test.java
