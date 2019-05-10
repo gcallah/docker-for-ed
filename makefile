@@ -68,22 +68,22 @@ push-pl:
 ## Java Image
 
 build-java:
-	docker build -t java docker_images/java/ --cache-from $(DOCKER_USER)/oracle-java-8
+	docker build -t java docker_images/java/ --cache-from $(DOCKER_USER)/java
 
 build-docker-java:
-	docker build -t $(DOCKER_USER)/java docker_images/java/ --cache-from $(DOCKER_USER)/oracle-java-8
+	docker build -t $(DOCKER_USER)/java docker_images/java/ --cache-from $(DOCKER_USER)/java
 
 run-interactive-java:
-	docker run --rm -it --name javacontainer $(DOCKER_USER)/oracle-java-8 bash
+	docker run --rm -it --name javacontainer $(DOCKER_USER)/java bash
 
 pull-java:
-	docker pull $(DOCKER_USER)/oracle-java-8 || true
+	docker pull $(DOCKER_USER)/java || true
 
 tag-java:
-	docker tag $(DOCKER_USER)/oracle-java-8 java || true
+	docker tag $(DOCKER_USER)/java java || true
 
 push-java:
-	docker push $(DOCKER_USER)/oracle-java-8
+	docker push $(DOCKER_USER)/java
 
 ## Big Data Image
 
