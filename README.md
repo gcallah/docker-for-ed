@@ -1,7 +1,7 @@
 # Docker For Education
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/vutsalsinghal/docker-for-ed/master/docker_for_edu_site/favicon.ico">
+  <img src="https://raw.githubusercontent.com/gcallah/docker-for-ed/master/frontend/favicon.ico">
 </p>
 
 [![Build Status](https://img.shields.io/travis/com/gcallah/docker-for-ed/master.svg?style=for-the-badge)](https://travis-ci.com/gcallah/docker-for-ed)
