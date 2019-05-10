@@ -1,5 +1,6 @@
 run-interactive:
-	docker run --rm -it -v `pwd`/HW:/home/HW --name plcontainer gcallah/pl sh
+	- docker pull gcallah/pl
+	- docker run --rm -it -v `pwd`/HW:/home/HW --name plcontainer gcallah/pl sh
 
 run-sample:
 	docker run --rm cplusplus
