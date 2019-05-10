@@ -1,14 +1,14 @@
 build-java8-image:
-	docker build -f Dockerfile -t demo/oracle-java-8 .
+	docker build -f Dockerfile -t gcallah/oracle-java-8 .
 
 run-interactive-java:
-	docker run --rm -it -v `pwd`:/home --name javacontainer demo/oracle-java-8 bash
+	docker run --rm -it -v `pwd`:/home --name javacontainer gcallah/oracle-java-8 bash
 
 compile-sample-HelloWorld:
-	docker run --rm -v `pwd`/Samples:/home demo/oracle-java-8 javac Test.java
+	docker run --rm -v `pwd`/Samples:/home gcallah/oracle-java-8 javac Test.java
 
 run-sample-HelloWorld:
-	docker run --rm -v `pwd`/Samples:/home demo/oracle-java-8 java Test
+	docker run --rm -v `pwd`/Samples:/home gcallah/oracle-java-8 java Test
 
 copy-to-container:
 	docker cp ./ javacontainer:/home/HW
@@ -19,13 +19,13 @@ copy-from-container:
 #windows support
 
 run-interactive-java-windows:
-	winpty docker run --rm -it -v `pwd`:/home --name javacontainer demo/oracle-java-8 bash
+	winpty docker run --rm -it -v `pwd`:/home --name javacontainer gcallah/oracle-java-8 bash
 
 compile-sample-HelloWorld:
-	winpty docker run --rm -v `pwd`/Samples:/home demo/oracle-java-8 javac Test.java
+	winpty docker run --rm -v `pwd`/Samples:/home gcallah/oracle-java-8 javac Test.java
 
 run-sample-HelloWorld:
-	winpty docker run --rm -v `pwd`/Samples:/home demo/oracle-java-8 java Test
+	winpty docker run --rm -v `pwd`/Samples:/home gcallah/oracle-java-8 java Test
 
 
 help:
