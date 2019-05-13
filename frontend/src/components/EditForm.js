@@ -78,6 +78,17 @@ class EditForm extends Component {
     })
   }
 
+  iterateSubFields(subFields) {
+    if(subFields.length){
+      return subFields.map(field => {
+        console.log("In if",field)
+        return field
+      })
+    } else {
+      console.log("In else",subFields)
+    }
+  }
+
   createForm(componentData) {
     this.attrs = componentData
     
@@ -85,7 +96,11 @@ class EditForm extends Component {
       <div key={idx}>
         <Form.Field>
           <label>{this.capitalize(attr[0])+':'}</label>
-          <Form.Input name={attr[0]} id={attr[0]} defaultValue={attr[1]} onChange={this.handleChange}></Form.Input>
+          {typeof(attr[1]) !== 'string' ?
+           this.iterateSubFields(attr[1])
+           :
+           <Form.Input name={attr[0]} id={attr[0]} defaultValue={attr[1]} onChange={this.handleChange} />
+          }
         </Form.Field>
         <br />
       </div>
