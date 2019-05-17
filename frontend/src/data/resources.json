@@ -60,7 +60,7 @@
     {
       "sectionId": 5,
       "subheading": "Docker Installation & Requirements",
-      "content":[
+      "content": [
         {
           "link": "https://docs.docker.com/docker-for-mac/install/",
           "text": "macOS and Linux"
@@ -72,9 +72,9 @@
       ]
     },
     {
-      "sectionId":6,
+      "sectionId": 6,
       "subheading": "Benefits of Docker for Teachers",
-      "content":[
+      "content": [
         {
           "link": "",
           "text": "Docker is a free tool thus eliminating the need for students to install anything locally and saving valuable time."
@@ -96,10 +96,10 @@
     {
       "sectionId": 7,
       "subheading": "Benefits of Docker for Students",
-      "content":[
+      "content": [
         {
           "link": "",
-          "text": "Docker is one of the most important skills to learn if you want to advance in a career in tech."
+          "text": "Docker is a very important skills to learn if you've a career in tech."
         },
         {
           "link": "",

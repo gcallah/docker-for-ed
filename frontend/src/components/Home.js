@@ -10,8 +10,9 @@ class Home extends Component {
     homeData: {},
     homeItems: {}
   }
-  
+
   async componentDidMount() {
+    this.setState({ loadingData: true })
     const domain = window.location.hostname.includes('localhost') ? 'http://localhost:8000' : 'https://docker4ed.pythonanywhere.com'
     const response = await axios.get(`${domain}/get?component=home`)
     const { result: homeData } = response.data

@@ -2,7 +2,7 @@
   "items": [
     {
       "name": "C++ Development",
-      "status": "Ongoing",
+      "status": "Latest",
       "description": "NYU's C++ development environment",
       "details": {
         "instructions": [
@@ -20,7 +20,7 @@
     },
     {
       "name": "Programming Languages",
-      "status": "Ongoing",
+      "status": "Latest",
       "description": "Environment bundled with several programming languages.",
       "details": {
         "instructions": [
@@ -69,7 +69,7 @@
         ],
         "downloadButton": {
           "text": "Makefile",
-          "link": "https://github.com/gcallah/docker-for-ed/tree/master/docker_images/java/Makefile"
+          "link": "https://raw.githubusercontent.com/gcallah/docker-for-ed/tree/master/docker_images/java/Makefile"
         }
       }
     },

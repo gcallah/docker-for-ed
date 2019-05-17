@@ -15,12 +15,12 @@ def component(request):
         return componentData
 
 def retrieveComponent(requestedComponent):
+    print(requestedComponent)
     componentsLocation = "{}/docker4edu/data".format(os.getcwd())
     components = [componentFile.split('.json')[0] for componentFile in os.listdir(componentsLocation) ]
     
     if requestedComponent == "all":
-        namesSortedByLength = sorted(components)
-        return JsonResponse({"result": namesSortedByLength})
+        return JsonResponse({"result": components})
     
     elif requestedComponent in components:
         
