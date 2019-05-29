@@ -1,3 +1,9 @@
+DH_ACCOUNT = gcallah
+CONTAINER = cplusplus
+
+container: Dockerfile 
+	docker build -t $(DH_ACCOUNT)/$(CONTAINER) .
+
 run-interactive:
 	docker run --rm -it -v `pwd`/HW:/home/HW --name cppcontainer pyoey/cplusplus bash
 

@@ -21,6 +21,7 @@ COPY Makefile .
 ADD samples ./samples
 
 RUN chmod 755 run_sample.sh
+RUN git clone https://github.com/gcallah/StudentOOP.git
 
 # run cmd
-CMD ["./run_sample.sh"]
+# CMD ["./run_sample.sh"]
