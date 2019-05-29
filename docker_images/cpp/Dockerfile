@@ -10,6 +10,7 @@ RUN apk update && \
     gdb \
     make \
     bash \
+    git \ 
     clang && \
     rm -rf /var/cache/apk/*
 
