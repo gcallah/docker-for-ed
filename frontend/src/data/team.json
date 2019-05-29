@@ -1,0 +1,31 @@
+{
+  "page": "/team",
+  "title": "Docker For Edu | Team",
+  "items": [
+    {
+      "sectionId": 1,
+      "content": [
+        {
+          "link": "https://github.com/gcallah",
+          "text": "Prof. Eugene Callahan"
+        },
+        {
+          "link": "https://github.com/vutsalsinghal",
+          "text": "Vutsal Singhal"
+        },
+        {
+          "link": "https://github.com/theEIC",
+          "text": "Praphulla Bhawsar"
+        },
+        {
+          "link": "https://github.com/kaery1000",
+          "text": "Karan Mehta"
+        },
+        {
+          "link": "https://github.com/ujjawalg",
+          "text": "Ujjawal Gupta"
+        }
+      ]
+    }
+  ]
+}

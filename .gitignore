@@ -5,12 +5,19 @@
 .env.production.local
 .vscode/
 *.log*
+*.idea*
+*coverage
 
-docker_for_edu_site/node_modules
-docker_for_edu_site/shrinkwrap.yaml
+frontend/node_modules*
+frontend/shrinkwrap.yaml
+frontend/pnpm-lock.yaml
+backend/mysite/settings.py
 
+*migrations
+*.sqlite3
 *__pycache__
 .pytest_cache
 *-lock.json
+*.backup
 
 docker_images/os/xv6-public

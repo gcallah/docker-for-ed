@@ -1,41 +1,45 @@
-FROM ubuntu:18.04
+FROM python:3.6-alpine3.9
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV SCHEME_VERSION 9.2
 
-RUN apt-get -yqq update
-RUN apt-get -yqq install build-essential tree curl gnupg git
+RUN cd /tmp \
+    && apk --no-cache --update --virtual build-dependencies add build-base m4 \
+    && rm -f /var/cache/apk/* \
+    && wget http://ftp.gnu.org/gnu/mit-scheme/stable.pkg/${SCHEME_VERSION}/mit-scheme-${SCHEME_VERSION}-x86-64.tar.gz \
+    && tar zxvf mit-scheme-${SCHEME_VERSION}-x86-64.tar.gz \
+    && rm mit-scheme-${SCHEME_VERSION}-x86-64.tar.gz \
+    && cd mit-scheme-${SCHEME_VERSION}/src \
+    && ./configure \
+    && make compile-microcode \
+    && make install \
+    && cd /tmp \
+    && rm -rf cd mit-scheme-${SCHEME_VERSION} \
+    && apk del build-dependencies
 
-# Install GCC and GDB
-RUN apt-get -yqq install gcc gdb
-
-# Install Python3.6+
-RUN apt-get -yqq install python3
-
-# Install Common Lisp
-RUN apt-get -yqq install sbcl
-
-# Install Haskel
-RUN apt-get -yqq install haskell-platform
-
-# Install MIT-Scheme
-RUN apt-get -yqq install mit-scheme
-
-# Install terminal-based editors
-RUN apt-get -yqq install vim nano
+RUN apk update && \
+    apk upgrade && \
+    apk --update add \
+    g++ \
+    bash \
+    ghc \
+    make \
+    vim \
+    nano \
+    emacs \
+    rm -rf /var/cache/apk/*
 
 # Set working dir
-WORKDIR /root
+WORKDIR /home
+ENV ENV="/etc/profile"
 
 # copy necessary code
 COPY run_sample.sh .
-COPY .welcome .
-COPY script.sh .
-COPY VERSION .
-COPY Makefile .
+COPY .ashrc .
+COPY makefile .
 ADD samples ./samples
 
 RUN chmod 755 run_sample.sh
-RUN /bin/bash script.sh
+RUN cat .ashrc >> "$ENV"
 
 # run cmd
 CMD ["./run_sample.sh"]

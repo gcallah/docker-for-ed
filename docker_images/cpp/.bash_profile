@@ -1,1 +1,1 @@
-alias help='make help'
+

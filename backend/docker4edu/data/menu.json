@@ -1,0 +1,21 @@
+{
+  "page": "",
+  "dataItems": [
+    {
+      "name": "Resources",
+      "link": "/resources"
+    },
+    {
+      "name": "Team",
+      "link": "/team"
+    },
+    {
+      "name": "About",
+      "link": "/about"
+    },
+    {
+      "name": "Edit Docs",
+      "link": "/edit"
+    }
+  ]
+}

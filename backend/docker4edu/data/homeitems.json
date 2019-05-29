@@ -1,0 +1,87 @@
+{
+  "items": [
+    {
+      "name": "C++ Development",
+      "status": "Ongoing",
+      "description": "NYU's C++ development environment",
+      "details": {
+        "instructions": [
+          "Create a course directory",
+          "Download Makefile below (save as 'Makefile' without any extension)",
+          "Place the file in the course dir",
+          "Open terminal inside the course dir",
+          "Run 'make run-interactive'"
+        ],
+        "downloadButton": {
+          "text": "Makefile",
+          "link": "https://raw.githubusercontent.com/gcallah/docker-for-ed/master/docker_images/cpp/makefile"
+        }
+      }
+    },
+    {
+      "name": "Programming Languages",
+      "status": "Ongoing",
+      "description": "Environment bundled with several programming languages.",
+      "details": {
+        "instructions": [
+          "Create a course directory",
+          "Download Makefile below (save as 'Makefile' without any extension)",
+          "Place the file in the course dir",
+          "Open terminal inside the course dir",
+          "Run 'make run-interactive'"
+        ],
+        "downloadButton": {
+          "text": "Makefile",
+          "link": "https://raw.githubusercontent.com/gcallah/docker-for-ed/master/docker_images/pl/makefile"
+        }
+      }
+    },
+    {
+      "name": "Operating Systems (Xv6)",
+      "status": "Ongoing",
+      "description": "Environment to run the xv6 OS out of the box",
+      "details": {
+        "instructions": [
+          "Create a course directory. Copy/note its full path (e.g.- /home/xyz/workdir/OS).",
+          "Download the Makefile by clicking on the button below.",
+          "Move the downloaded Makefile to the course directory you created.",
+          "Open a terminal inside the course directory.",
+          "Run 'make start-xv6'.",
+          "Every time you need to run xv6 after this, you need to run 'make run-xv6'."
+        ],
+        "downloadButton": {
+          "text": "Makefile",
+          "link": "https://raw.githubusercontent.com/gcallah/docker-for-ed/master/docker_images/os/Makefile"
+        }
+      }
+    },
+    {
+      "name": "Java(JDK 8)",
+      "status": "Ongoing",
+      "description": "Docker Image with OpenJDK 8.",
+      "details": {
+        "instructions": [
+          "Create a course directory",
+          "Download Makefile below (save as 'Makefile' without any extension)",
+          "Place the file in the course dir",
+          "Open terminal inside the course dir",
+          "Run 'make help' and follow the instructions"
+        ],
+        "downloadButton": {
+          "text": "Makefile",
+          "link": "https://github.com/gcallah/docker-for-ed/tree/master/docker_images/java/Makefile"
+        }
+      }
+    },
+    {
+      "name": "Distributed Computing",
+      "status": "Coming Soon",
+      "description": "Environment for designing distributed systems using Golang"
+    },
+    {
+      "name": "Programming for Big Data",
+      "status": "Ongoing",
+      "description": "Pre-built environment for big data"
+    }
+  ]
+}
