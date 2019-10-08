@@ -1,0 +1,29 @@
+<html>
+    <head>
+<!--include head.txt -->
+        <title>
+            Docker for Education
+        </title>
+    </head>
+
+    <body>
+<!--include logo.txt -->
+<!--include menu.txt -->
+        <h1>
+            Docker for Education
+        </h1>
+
+        <p>
+            This is a web site documenting our efforts to use
+            Docker in educational settings.
+        </p>
+
+        <p>
+            <a href="https://github.com/gcallah/docker-for-ed/blob/master/documentation/README.md">
+                Here is our guide to docker
+            conventions for our projects.</a> 
+        </p>
+
+
+    </body>
+</html>

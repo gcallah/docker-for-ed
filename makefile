@@ -1,133 +1,33 @@
-DOCKER_USER = gcallah
+# A template makefile that works for static websites.
+# Need to export as ENV var
+export TEMPLATE_DIR = templates
+PTML_DIR = html_src
+UTILS_DIR = utils
 
+INCS = $(TEMPLATE_DIR)/head.txt $(TEMPLATE_DIR)/logo.txt $(TEMPLATE_DIR)/menu.txt
 
-# Docker commands:
+HTMLFILES = $(shell ls $(PTML_DIR)/*.ptml | sed -e 's/.ptml/.html/' | sed -e 's/html_src\///')
 
-build-images: build-cpp build-pl build-java
+%.html: $(PTML_DIR)/%.ptml $(INCS)
+	python3 $(UTILS_DIR)/html_checker.py $< 
+	$(UTILS_DIR)/html_include.awk <$< >$@
+	git add $@
 
-build-docker-images: build-docker-cpp build-docker-pl build-docker-java
+local: $(HTMLFILES)
 
-pull-images: pull-cpp pull-pl pull-java
+prod: $(INCS) $(HTMLFILES)
+	-git commit -a 
+	git pull origin master
+	git push origin master
 
-tag-images: tag-cpp tag-pl tag-java
+submods:
+	git submodule foreach 'git pull origin master'
+	
+nocrud:
+	rm *~
+	rm .*swp
+	rm $(PTML_DIR)/*~
+	rm $(PTML_DIR)/.*swp
 
-push-images: push-cpp push-pl push-java
-
-
-# For each image below, maintain the order:
-#   1. build-<image>
-#   2. build-docker-<image>
-#   3. run-interactive-<image>
-#   4. pull-<image>
-#   5. tag-<image>
-#   6. push-<image>
-
-
-## CPP Image
-
-build-cpp:
-	docker build -t cplusplus docker_images/cpp/ --cache-from $(DOCKER_USER)/cplusplus
-
-build-docker-cpp:
-	docker build -t $(DOCKER_USER)/cplusplus docker_images/cpp/ --cache-from $(DOCKER_USER)/cplusplus
-
-run-interactive-cpp:
-	docker run --rm -it --name cppcontainer $(DOCKER_USER)/cplusplus sh
-
-pull-cpp:
-	docker pull $(DOCKER_USER)/cplusplus || true
-
-tag-cpp:
-	docker tag $(DOCKER_USER)/cplusplus cplusplus || true
-
-push-cpp:
-	docker push $(DOCKER_USER)/cplusplus
-
-## PL Image
-
-build-pl:
-	docker build -t pl docker_images/pl/ --cache-from $(DOCKER_USER)/pl
-
-build-docker-pl:
-	docker build -t $(DOCKER_USER)/pl docker_images/pl/ --cache-from $(DOCKER_USER)/pl
-
-run-interactive-pl:
-	docker run --rm -it --name plcontainer $(DOCKER_USER)/pl sh
-
-pull-pl:
-	docker pull $(DOCKER_USER)/pl || true
-
-tag-pl:
-	docker tag $(DOCKER_USER)/pl pl || true
-
-push-pl:
-	docker push $(DOCKER_USER)/pl
-
-## OS Image
-
-## Java Image
-
-build-java:
-	docker build -t java docker_images/java/ --cache-from $(DOCKER_USER)/java
-
-build-docker-java:
-	docker build -t $(DOCKER_USER)/java docker_images/java/ --cache-from $(DOCKER_USER)/java
-
-run-interactive-java:
-	docker run --rm -it --name javacontainer $(DOCKER_USER)/java bash
-
-pull-java:
-	docker pull $(DOCKER_USER)/java || true
-
-tag-java:
-	docker tag $(DOCKER_USER)/java java || true
-
-push-java:
-	docker push $(DOCKER_USER)/java
-
-## Big Data Image
-
-
-## Docker For Edu React docs
-
-build-docs-image:
-	docker build -t d4ed-image frontend
-
-run-docs-interactive:
-	docker run --rm -it --name d4ed-container d4ed-image sh
-
-run-docs:
-	docker run --rm -it -p 3000:3000 --name d4ed-container d4ed-image
-
-# React gh-pages commands:
-
-build-docs-local:
-	- rm -r static || true
-	- rm precache-manifest* || true
-	- cd frontend && \
-	npm run build && \
-	cp favicon.ico build && \
-	cp -r build/* .. && \
-	cd ..
-
-run-docs-local:
-	cd frontend && \
-	npm start
-
-
-# Tests
-
-test-pl:
-	pytest -v tests/test_docker-pl.py
-
-test-cpp:
-	pytest -v tests/test_docker-cpp.py
-
-test-os:
-	pytest -v tests/test_docker-os.py
-
-test-java:
-	pytest -v tests/test_docker-java.py
-
-tests: test-cpp test-os test-pl test-java
-	nose2 -Cv tests
+clean:
+	touch $(PTML_DIR)/*.ptml; make local
