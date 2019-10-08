@@ -42,7 +42,7 @@ prod_container: $(DOCKER_DIR)/Deployable $(DOCKER_DIR)/requirements.txt
 	docker system prune -f
 	docker build -t gcallah/$(REPO) docker --no-cache --build-arg repo=$(REPO) -f $(DOCKER_DIR)/Deployable
 
-# deploy prod containerr
+# deploy prod container
 deploy_container:
 	docker push gcallah/$(REPO):latest
 ```
