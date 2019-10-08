@@ -2,7 +2,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            About This Project
+            About Docker for Education
         </title>
     </head>
 
@@ -10,8 +10,33 @@
 <!--include logo.txt -->
 <!--include menu.txt -->
         <h1>
-            About This Project
+            About Docker for Education
         </h1>
+
+        <p>
+            This is a project of the NYU Tandon DevOps
+            class.
+        </p>
+
+        <p>
+            Participants include:
+        </p>
+
+        <ul>
+            <li>
+                Zhuolun Li
+            </li>
+                
+            <li>
+                Xinchao Min
+            </li>
+
+            <li>
+                Neel Chauhan
+            </li>
+
+
+        </ul>
 
     </body>
 </html>
