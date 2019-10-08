@@ -1,6 +1,6 @@
         <div style="text-align:center">
             <figure class="logo">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Container_ships_President_Truman_%28IMO_8616283%29_and_President_Kennedy_%28IMO_8616295%29_at_San_Francisco.jpg/1600px-Container_ships_President_Truman_%28IMO_8616283%29_and_President_Kennedy_%28IMO_8616295%29_at_San_Francisco.jpg">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Container_ships_President_Truman_%28IMO_8616283%29_and_President_Kennedy_%28IMO_8616295%29_at_San_Francisco.jpg/1600px-Container_ships_President_Truman_%28IMO_8616283%29_and_President_Kennedy_%28IMO_8616295%29_at_San_Francisco.jpg" width="20%">
             </figure>
         </div>
 
