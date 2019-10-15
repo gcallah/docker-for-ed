@@ -10,7 +10,7 @@ All docker-relative config files should be put in a `docker`  directory.
 
 Each project should contain two dockerfile:
 
-* `Dockerfile` for creaing the images for dev environment
+* `Dockerfile` for creating the images for dev environment
 * `Deployable` for creating the images for prod environment
 
 Images should include all necessary packages. The required packages should be written into separate text files.  
@@ -19,7 +19,8 @@ Images should include all necessary packages. The required packages should be wr
 
 We can import those requirements by adding the following line in our dockerfile
 
-`COPY requirements.txt /requirements.txt`
+`COPY requirements-prod.txt /requirements-prod.txt`
+`COPY requirements-dev.txt /requirements-dev.txt`
 
 # Makefile Tasks
 
