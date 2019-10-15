@@ -19,8 +19,8 @@ Images should include all necessary packages. The required packages should be wr
 
 We can import those requirements by adding the following line in our dockerfile
 
-`COPY requirements-prod.txt /requirements-prod.txt`
-
+`COPY requirements.txt /requirements.txt`
+or
 `COPY requirements-dev.txt /requirements-dev.txt`
 
 # Makefile Tasks
