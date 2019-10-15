@@ -1,0 +1,23 @@
+<html>
+<head>
+    <!--include head.txt -->
+    <title>
+        Docker for Flask Applications
+    </title>
+</head>
+
+<body>
+<!--include logo.txt -->
+<!--include menu.txt -->
+<h1>
+    Docker for Flask Applications
+</h1>
+
+<p>
+    Here we collect our knowledge about using Docker for
+    Flask applications.
+</p>
+
+
+</body>
+</html>
