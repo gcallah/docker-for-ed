@@ -17,7 +17,7 @@ Images should include all necessary packages. The required packages should be wr
 * `requirements-prod.txt` for  `Dockerfile` 
 * `requirements-dev.txt` for `Deployable`
 
-We can import those requirements by adding the following line in our dockerfile / deployable
+We can import those requirements by adding the following line in our dockerfile or deployable
 
 `COPY requirements.txt /requirements.txt`
 or
