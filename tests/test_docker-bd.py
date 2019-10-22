@@ -5,14 +5,14 @@ import unittest2 as unittest
 
 print("\n[INFO] Running tests for Docker Distributed Computing image...\n")
 
-IMAGE_NAME = "gcallah/bigdata"
+IMAGE_NAME = "gcallah/pbda"
 client = docker.from_env()
 
 try:
     # Check if the image exists
     client.images.get(IMAGE_NAME)
 except:
-    IMAGE_NAME = "bigdata"
+    IMAGE_NAME = "pbda"
 
 class TestBD(unittest.TestCase):
     def test_is_bd_running(self):
