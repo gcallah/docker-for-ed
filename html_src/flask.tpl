@@ -13,7 +13,6 @@
     Docker for Flask Applications
 </h1>
 
-<h4>Access flask server from within docker container</h4>
 
 {{markdown_content}}
 
