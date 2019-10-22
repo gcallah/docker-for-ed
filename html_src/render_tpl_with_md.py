@@ -30,14 +30,3 @@ for file in cur_path.glob('*.tpl'):
     ptml_file.write(ptml)
     print("Generating " + ptml_file.name)
     ptml_file.close()
-
-#
-# file_path = os.path.relpath('flask.tpl', cur_path)
-#
-# print(file_path)
-#
-# TEMPLATE_FILE = open(file_path, 'r')
-# TEMPLATE = TEMPLATE_FILE.read()
-# md = res
-# ptml = jinja2.Template(TEMPLATE).render(markdown_content=md)
-# print(ptml)
