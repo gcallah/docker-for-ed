@@ -22,6 +22,18 @@ p {
     line-height: 140%;
 }
 
+pre {
+    font-size: 1.2em;
+    margin: .6em 6em .6em 5em;
+    padding: 20px;
+    line-height: 140%;
+    background: #d1d1d1;
+}
+
+pre>code{
+    color:rgba(0,0,0,0.8)
+}
+
 hr {
     margin: 2em 12em 2em 12em;
 }

@@ -15,7 +15,10 @@ FORCE:
 	$(UTILS_DIR)/html_include.awk <$< >$@
 	git add $@
 
-local: $(HTMLFILES)
+render:
+	python3 $(PTML_DIR)/render_tpl_with_md.py
+
+local: render $(HTMLFILES)
 
 prod: $(INCS) $(HTMLFILES)
 	-git commit -a 
