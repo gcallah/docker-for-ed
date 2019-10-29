@@ -13,26 +13,8 @@
 <h1>
     Docker for Flask Applications
 </h1>
-
-<p>
-    Here we collect our knowledge about using Docker for
-    Flask applications.
-</p>
-
-<p>
-    <a href="https://github.com/gcallah/docker-for-ed/blob/master/html_src/flask.md">
-       Access flask server from within docker container and some reason</a> 
-</p>
-
-<p>
-    <a href="https://runnable.com/docker/python/dockerize-your-flask-application">
-       How to dockerize a Flask application.</a>
-</p>
-
-<p>
-    <a href="http://containertutorials.com/docker-compose/flask-simple-app.html">
-      Dockerize Simple Flask App.</a>
-</p>
+tests
+<!--include flask.md -->
 
 </body>
 </html>
