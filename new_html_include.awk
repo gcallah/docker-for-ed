@@ -23,7 +23,7 @@ BEGIN {
         if (quiz_path != "" && match($2, /quiz/)) {
             file = quiz_path "/" $2
         }
-        # if file is a markdown, then render first.
+        # if file is a markdown
         else if (match(file, ".*\.md$")){
             is_markdown = 1
             if(markdown_path != ""){
@@ -38,19 +38,23 @@ BEGIN {
         }
     }
     i = 0
+    # if it's a markdown file
     if(is_markdown==1){
+        # render markdown first
         cmd = "python3 ./render_md.py " file
         while((cmd | getline) >0 ){
             print $0
             i++
         }
-        status = close(cmd)
+        close(cmd)
         if(i == 0){
             s = "<p>We attempted to render markdown file from " file " but failed.</p>"
             print s > "/dev/stderr"
             print s
         }
-    }else{
+    }
+    # if this is a normal file.
+    else{
         while((getline < file ) > 0 ) {
             print $0
             i++

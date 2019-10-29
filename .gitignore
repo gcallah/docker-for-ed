@@ -19,5 +19,5 @@ backend/mysite/settings.py
 .pytest_cache
 *-lock.json
 *.backup
-
+node_modules/*
 docker_images/os/xv6-public
