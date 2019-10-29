@@ -34,9 +34,26 @@
             <li>
                 Neel Chauhan
             </li>
-
-
         </ul>
 
+        <p>
+            Here are some knnowledge we get helping us to use docker
+            projects better.<
+        </p>
+
+        <p>
+             <a href="https://runnable.com/docker/python/dockerize-your-flask-application">
+                How to dockerize a Flask application.</a>
+        </p>
+
+        <p>
+            <a href="http://containertutorials.com/docker-compose/flask-simple-app.html">
+                Dockerize Simple Flask App.</a>
+        </p>
+
+        <p>
+            <a href="https://docs.docker.com/docker-hub/builds/automated-testing/">
+                How to Set up automated test files.</a>
+        </p>
     </body>
 </html>
