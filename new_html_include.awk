@@ -25,42 +25,45 @@ BEGIN {
         }
         # if file is a markdown, then render first.
         else if (match(file, ".*\.md$")){
-            if(markdown_path!=""){
+            is_markdown = 1
+            if(markdown_path != ""){
                 file = markdown_path "/" $2
             }
-           cmd = "python3 ./render_md.py"
-           cmd | getline file
-           status = close(cmd)
-           if(status ==0){
-                s = "<p>We attempted to render markdown file from " file " but failed.</p>"
-                print s > "/dev/stderr"
-                print s
-           }
         }
         # if file is a template.
         else{
-            if(template_path!=""){
+            if(template_path != ""){
                 file = template_path "/" $2
             }
         }
     }
-    # if file is a markdown file, then render first.
-    if(match(file, ".*\.md$")){
-        cmd = "python3 ./render_md.py"
-        cmd | getline file
-        close(file)
-    }
     i = 0
-    while((getline < file ) > 0 ) {
-    	print $0
-        i++
+    if(is_markdown==1){
+        cmd = "python3 ./render_md.py " file
+        while((cmd | getline) >0 ){
+            print $0
+            i++
+        }
+        status = close(cmd)
+        if(i == 0){
+            s = "<p>We attempted to render markdown file from " file " but failed.</p>"
+            print s > "/dev/stderr"
+            print s
+        }
+    }else{
+        while((getline < file ) > 0 ) {
+            print $0
+            i++
+        }
+        close(file)
+        if (i == 0) {
+            s = "<p>We attempted to read from " file " but failed.</p>"
+            print s > "/dev/stderr"
+            print s
+        }
     }
-    close(file)
-    if (i == 0) {
-        s = "<p>We attempted to read from " file " but failed.</p>"
-        print s > "/dev/stderr"
-        print s
-    }
+
+
     next
 }
 

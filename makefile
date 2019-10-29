@@ -1,6 +1,7 @@
 # A template makefile that works for static websites.
 # Need to export as ENV var
 export TEMPLATE_DIR = templates
+export MARKDOWN_DIR = markdown_files
 PTML_DIR = html_src
 UTILS_DIR = utils
 
@@ -12,13 +13,13 @@ FORCE:
 
 %.html: $(PTML_DIR)/%.ptml $(INCS)
 	python3 $(UTILS_DIR)/html_checker.py $< 
-	$(UTILS_DIR)/html_include.awk <$< >$@
+	./new_html_include.awk <$< >$@
 	git add $@
 
 render:
 	python3 $(PTML_DIR)/render_tpl_with_md.py
 
-local: render $(HTMLFILES)
+local: $(HTMLFILES)
 
 prod: $(INCS) $(HTMLFILES)
 	-git commit -a 
