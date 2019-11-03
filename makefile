@@ -15,12 +15,9 @@ HTMLFILES = $(shell ls $(PTML_DIR)/*.ptml | sed -e 's/.ptml/.html/' | sed -e 's/
 FORCE:
 
 %.html: $(PTML_DIR)/%.ptml $(INCS)
-	python3 $(UTILS_DIR)/html_checker.py $< 
-	./new_html_include.awk <$< >$@
+	python3 $(UTILS_DIR)/html_checker.py $<
+	./render_md.awk <$< | $(UTILS_DIR)/html_include.awk >$@
 	git add $@
-
-render:
-	python3 $(PTML_DIR)/render_tpl_with_md.py
 
 local: $(HTMLFILES)
 
