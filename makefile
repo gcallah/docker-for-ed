@@ -16,7 +16,7 @@ FORCE:
 
 %.html: $(PTML_DIR)/%.ptml $(INCS)
 	python3 $(UTILS_DIR)/html_checker.py $<
-	./render_md.awk <$< | $(UTILS_DIR)/html_include.awk >$@
+	$(UTILS_DIR)/render_md.awk <$< | $(UTILS_DIR)/html_include.awk >$@
 	git add $@
 
 local: $(HTMLFILES)
