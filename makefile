@@ -28,8 +28,7 @@ prod: $(INCS) $(HTMLFILES)
 
 # real tests need to be written!
 tests: FORCE
-	ls
-
+	docker build -t gcallah/cplusplus docker_images/cpp/
 
 lint: $(patsubst %.py,%.pylint,$(PYTHONFILES))
 
