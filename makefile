@@ -31,6 +31,8 @@ prod: $(INCS) $(HTMLFILES)
 tests: FORCE
 	#$(CONTCMD) [docker hub name] [local name]
 	$(CONTCMD) cpluscplus cpp
+	$(CONTCMD) pl pl
+	$(CONTCMD) java java
 
 lint: $(patsubst %.py,%.pylint,$(PYTHONFILES))
 
