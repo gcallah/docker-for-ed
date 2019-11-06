@@ -1,6 +1,6 @@
 FROM  phusion/baseimage:0.11
 
-RUN apt-get update && apt-get install -y --force-yes openjdk-8-jdk
+RUN apt-get update && apt-get install -y --force-yes openjdk-8-jdk-headless
 
 #Install some editors and essentials
 RUN apt-get -yqq install vim nano make emacs
