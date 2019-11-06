@@ -13,7 +13,7 @@ WORKDIR /home
 
 COPY ./Samples/Test.class ./
 
-RUN java ./Samples/Test.class
+RUN java Test
 
 #baseimage's init system
 CMD ["/sbin/my_init"]
