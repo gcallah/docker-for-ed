@@ -30,4 +30,4 @@ RUN git clone https://github.com/gcallah/StudentOOP.git
 RUN cat .ashrc >> "$ENV"
 
 # run cmd
-# CMD ["./run_sample.sh"]
+CMD ["./run_sample.sh"]
