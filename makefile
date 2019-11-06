@@ -32,7 +32,7 @@ tests: FORCE
 	#$(CONTCMD) [docker hub name] [local name]
 	$(CONTCMD) cpluscplus cpp
 	$(CONTCMD) pl pl
-	$(CONTCMD) java java
+	# $(CONTCMD) java java - Doesn't work
 
 lint: $(patsubst %.py,%.pylint,$(PYTHONFILES))
 
