@@ -33,6 +33,7 @@ tests: FORCE
 	$(CONTCMD) cpluscplus cpp
 	$(CONTCMD) pl pl
 	$(CONTCMD) java java
+	pytest tests/
 
 lint: $(patsubst %.py,%.pylint,$(PYTHONFILES))
 
