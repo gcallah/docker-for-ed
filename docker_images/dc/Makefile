@@ -1,24 +1,25 @@
 DH_ACCOUNT = gcallah
-CONTAINER = cplusplus
+DH_CONTAINER = dc
+CONTAINER = dccontainer
 
 container: Dockerfile 
-	docker build -t $(DH_ACCOUNT)/$(CONTAINER) .
+	docker build -t $(DH_ACCOUNT)/$(DH_CONTAINER) .
 	
 run-interactive:
-	- docker pull gcallah/dc
-	- docker run --rm -it -v `pwd`/HW:/home/HW --name dccontainer gcallah/dc sh
+	- docker pull $(DH_ACCOUNT)/$(DH_CONTAINER)
+	- docker run --rm -it -v `pwd`/HW:/home/HW --name $(CONTAINER) $(DH_ACCOUNT)/$(DH_CONTAINER) sh
 
 run-sample:
-	docker run --rm distributedcomputing
+	docker run --rm $(DH_ACCOUNT)/$(DH_CONTAINER)
 
 copy-to-container:
-	docker cp HW dccontainer:/home/HW
+	docker cp HW $(CONTAINER):/home/HW
 
 copy-from-container:
-	docker cp dccontainer:/home/HW .
+	docker cp $(CONTAINER):/home/HW .
 
 save-hw:
-	docker cp dccontainer:/home/HW .
+	docker cp $(CONTAINER):/home/HW .
 
 help:
 	@echo
