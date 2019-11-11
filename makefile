@@ -30,9 +30,13 @@ prod: $(INCS) $(HTMLFILES)
 # real tests need to be written!
 tests: FORCE
 	#$(CONTCMD) [docker hub name] [local name]
-	$(CONTCMD) cpluscplus cpp
-	$(CONTCMD) pl pl
+	$(CONTCMD) cplusplus cpp
+	$(CONTCMD) dc dc
 	$(CONTCMD) java java
+	$(CONTCMD) os os
+	$(CONTCMD) pbda pbda
+	$(CONTCMD) pl pl
+	pytest tests/
 
 lint: $(patsubst %.py,%.pylint,$(PYTHONFILES))
 
