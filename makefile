@@ -30,7 +30,7 @@ prod: $(INCS) $(HTMLFILES)
 # real tests need to be written!
 tests: FORCE
 	#$(CONTCMD) [docker hub name] [local name]
-	$(CONTCMD) cpluscplus cpp
+	$(CONTCMD) cplusplus cpp
 	$(CONTCMD) dc dc
 	$(CONTCMD) java java
 	$(CONTCMD) os os
