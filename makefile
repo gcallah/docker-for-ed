@@ -46,7 +46,6 @@ tests: FORCE
 	$(CONTCMD) pbda pbda
 	$(CONTCMD) pl pl
 	pytest tests/
-	lint
 
 submods:
 	git submodule foreach 'git pull origin master'
