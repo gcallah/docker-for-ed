@@ -1,8 +1,29 @@
-FROM alpine:latest
+FROM ubuntu:latest
 
-RUN apk update && apk add\ 
-    build-base\
-    qemu-system-i386
-# RUN cd qemu && ./configure --disable-kvm --target-list="i386-softmmu x86_64-softmmu" --python=/usr/bin/python2.7 && make && make install && cd ..
+RUN apt-get -qq update
 
-CMD cd /home/xv6 && make qemu && ./kernel
+RUN apt-get install -y git \
+                    build-essential \
+                    gdb \
+                    gcc-multilib \
+                    tmux
+
+RUN git clone http://web.mit.edu/ccutler/www/qemu.git -b 6.828-2.3.0
+
+RUN apt-get install -y libsdl1.2-dev \
+                        libtool-bin \
+                        libglib2.0-dev \
+                        libz-dev \
+                        libpixman-1-dev
+
+RUN cd qemu && \
+        ./configure --disable-kvm --target-list="i386-softmmu x86_64-softmmu" && \
+        make && \
+        make install && \
+        cd ..
+
+ADD ./jos jos
+
+WORKDIR jos
+
+CMD ["sh"]
