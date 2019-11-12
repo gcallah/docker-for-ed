@@ -2,12 +2,16 @@
 # Need to export as ENV var
 export TEMPLATE_DIR = templates
 export MARKDOWN_DIR = markdown_files
+
 PTML_DIR = html_src
 UTILS_DIR = utils
 BACK_DIR = backend
+TEST_DIR = tests
 PYLINT = flake8
 PYLINTFLAGS = 
 PYTHONFILES = $(shell ls $(BACK_DIR)/*.py)
+PYTHON_FILES += $(shell ls $(TEST_DIR)/*.py)
+
 INCS = $(TEMPLATE_DIR)/head.txt $(TEMPLATE_DIR)/logo.txt $(TEMPLATE_DIR)/menu.txt
 CONTCMD = sh build_container.sh
 
@@ -27,6 +31,11 @@ prod: $(INCS) $(HTMLFILES)
 	git pull origin master
 	git push origin master
 
+lint: $(patsubst %.py,%.pylint,$(PYTHONFILES))
+
+%.pylint:
+	$(PYLINT) $(PYLINTFLAGS) $*.py
+
 # real tests need to be written!
 tests: FORCE
 	#$(CONTCMD) [docker hub name] [local name]
@@ -37,11 +46,7 @@ tests: FORCE
 	$(CONTCMD) pbda pbda
 	$(CONTCMD) pl pl
 	pytest tests/
-
-lint: $(patsubst %.py,%.pylint,$(PYTHONFILES))
-
-%.pylint:
-	$(PYLINT) $(PYLINTFLAGS) $*.py
+	lint
 
 submods:
 	git submodule foreach 'git pull origin master'
