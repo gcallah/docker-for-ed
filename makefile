@@ -38,14 +38,15 @@ lint: $(patsubst %.py,%.pylint,$(PYTHONFILES))
 
 # real tests need to be written!
 tests: FORCE
+	ls
 	#$(CONTCMD) [docker hub name] [local name]
-	$(CONTCMD) cplusplus cpp
-	$(CONTCMD) dc dc
-	$(CONTCMD) java java
-	$(CONTCMD) os os
-	$(CONTCMD) pbda pbda
-	$(CONTCMD) pl pl
-	pytest tests/
+# 	$(CONTCMD) cplusplus cpp
+# 	$(CONTCMD) dc dc
+# 	$(CONTCMD) java java
+# 	$(CONTCMD) os os
+# 	$(CONTCMD) pbda pbda
+# 	$(CONTCMD) pl pl
+# 	pytest tests/
 
 submods:
 	git submodule foreach 'git pull origin master'
