@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build -t $1 docker_images/$2/
+docker build -t gcallah/$1 docker_images/$2/
