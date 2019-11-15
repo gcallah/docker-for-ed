@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM alpine:latest
 
 RUN apk update && apk add\ 
     build-base\
