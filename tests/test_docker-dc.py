@@ -15,7 +15,7 @@ except:
     IMAGE_NAME = "dc"
 
 class TestDC(unittest.TestCase):
-    def test_is_bd_running(self):
+    def test_is_dc_running(self):
         print("[INFO] Checking if disctributed computing was built and if kernel is running")
 
 if __name__ == '__main__':
