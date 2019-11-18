@@ -8,6 +8,8 @@ RUN apt-get install -y git \
                     gcc-multilib \
                     tmux
 
+#Follow along with the MIT Operating Systems course (https://pdos.csail.mit.edu/6.828/2017/) for learning more about kernel and os development.
+
 RUN git clone http://web.mit.edu/ccutler/www/qemu.git -b 6.828-2.3.0
 
 RUN apt-get install -y libsdl1.2-dev \

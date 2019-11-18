@@ -15,7 +15,7 @@ except:
     IMAGE_NAME = "pbda"
 
 class TestPbda(unittest.TestCase):
-    def test_is_dc_running(self):
+    def test_is_bd_running(self):
         print("[INFO] Checking if big Data was built and if kernel is running")
  
 
