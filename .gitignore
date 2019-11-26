@@ -8,10 +8,8 @@
 *.idea*
 *coverage
 
-frontend/node_modules*
-frontend/shrinkwrap.yaml
-frontend/pnpm-lock.yaml
-backend/mysite/settings.py
+curr_unused/frontend/node_modules/*
+curr_unused/frontend/build
 
 *migrations
 *.sqlite3
