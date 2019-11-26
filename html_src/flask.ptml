@@ -10,9 +10,7 @@
 <body>
 <!--include logo.txt -->
 <!--include menu.txt -->
-<h1>
-    Docker for Flask Applications
-</h1>
+
 
 <!--include flask.md -->
 
