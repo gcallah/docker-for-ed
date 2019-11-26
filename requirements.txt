@@ -20,6 +20,6 @@ six==1.12.0
 sqlparse==0.3.0
 traceback2==1.4.0
 unittest2==1.1.0
-urllib3==1.24.1
+urllib3==1.24.2
 websocket-client==0.56.0
 mistune==0.8.4
