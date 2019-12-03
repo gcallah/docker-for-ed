@@ -8,6 +8,8 @@
 *.idea*
 *coverage
 
+
+
 curr_unused/frontend/node_modules/*
 curr_unused/frontend/build
 
@@ -19,3 +21,9 @@ curr_unused/frontend/build
 *.backup
 node_modules/*
 docker_images/os/xv6-public
+
+target
+build
+.classpath
+.project
+dependency-reduced-pom.xml
