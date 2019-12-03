@@ -9,6 +9,13 @@ RUN pip install uwsgi Flask
 # clone for github
 RUN git clone https://github.com/arcolife/dockerComp.git /opt/dockerComp/
 
+# add from source
+
+# RUN mkdir -p /opt/dockerComp/app/ /opt/dockerComp/conf/ /var/dockerComp/
+# ADD ./src/client/app /opt/dockerComp/app/
+# ADD ./src/client/conf /opt/dockerComp/conf/
+# ADD ./src/client/scripts /opt/dockerComp/scripts/
+
 # configure services
 RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
 RUN rm /etc/nginx/sites-enabled/default
