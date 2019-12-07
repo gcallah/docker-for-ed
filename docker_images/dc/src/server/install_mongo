@@ -34,16 +34,16 @@ db.createUser(
 
 # then run following for a regular db and user, as follows:
 
-use jugad
+use user1
 db.createUser(
   {
-    user: "arco",
-    pwd: "arco123",
+    user: "user",
+    pwd: "user123",
     roles:
     [
       {
         role: "userAdmin",
-        db: "jugad"
+        db: "user1"
       }
     ]
   }

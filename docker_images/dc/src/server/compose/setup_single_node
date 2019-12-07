@@ -16,13 +16,13 @@ docker ps | grep compose
 # gcloud config set project  tenacious-plane-107419
 
 kubectl get nodes
-kubectl run dockercomp --image=arcolife/docker_comp --port=80
-kubectl run dockercomp1 --image=arcolife/docker_comp --port=80
-kubectl run dockercomp2 --image=arcolife/docker_comp --port=80
-kubectl run dockercomp3 --image=arcolife/docker_comp --port=80
-kubectl run dockercomp4 --image=arcolife/docker_comp --port=80
-kubectl run dockercomp5 --image=arcolife/docker_comp --port=80
-kubectl run dockercomp6 --image=arcolife/docker_comp --port=80
+kubectl run dockercomp --image=gcallah/dc --port=80
+kubectl run dockercomp1 --image=gcallah/dc --port=80
+kubectl run dockercomp2 --image=gcallah/dc --port=80
+kubectl run dockercomp3 --image=gcallah/dc --port=80
+kubectl run dockercomp4 --image=gcallah/dc --port=80
+kubectl run dockercomp5 --image=gcallah/dc --port=80
+kubectl run dockercomp6 --image=gcallah/dc --port=80
 
 kubectl get pods
 kubectl get rc

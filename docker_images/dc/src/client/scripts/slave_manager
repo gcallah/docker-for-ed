@@ -18,7 +18,7 @@ CLIENT_IP=`./get_ip.py`
 DUMP_LOCATION='/tmp/dc_packet.json'
 
 # CURRENT_WORKERS is also set in ./launch_workers when workers are launched
-CURRENT_WORKERS=$(docker ps  | grep arcolife/docker_comp | awk -F' ' '{print $1}')
+CURRENT_WORKERS=$(docker ps  | grep gcallah/dc | awk -F' ' '{print $1}')
 array=($CURRENT_WORKERS)
 
 start_daemon(){
