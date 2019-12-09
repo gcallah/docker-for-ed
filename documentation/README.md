@@ -92,3 +92,19 @@ echo "Now running docker to spin up the container."
 docker run -it -p $HOST_PORT:$CONT_PORT $CONTAINER /home/$REPO/runserver.sh
 
 ```
+
+# Tests
+
+Docker containers should have a unit test which tests the functionality of the container.
+
+In the `tests:` section of the `makefile`, to do a working test of a Docker container, you add the following line:
+
+```
+	$(CONTCMD) [docker hub name] [local name]
+```
+
+The `[docker hub name]` is the name used on the Docker Hub (minus the `gcallah/` prefix) and the `[local name]` is the directory name containing the container's `Dockerfile` which is in the `docker_images/` directory.
+
+A test should also be added to the `/tests` directory.
+
+TODO: Expand this section.
