@@ -6,7 +6,7 @@ This document is working in progress.
 
 # Dockerfiles
 
-All docker-relative config files should be put in a `docker`  directory. 
+All docker-relative config files should be put in a `docker` directory. 
 
 Each project should contain two dockerfile:
 
@@ -14,10 +14,10 @@ Each project should contain two dockerfile:
 * `Deployable` for creating the images for prod environment
 
 Images should include all necessary packages. The required packages should be written into separate text files.  
-* `requirements-prod.txt` for  `Dockerfile` 
+* `requirements-prod.txt` for `Dockerfile` 
 * `requirements-dev.txt` for `Deployable`
 
-We can import those requirements by adding the following line in our dockerfile or deployable
+We can import those requirements by adding the following line in our `Dockerfile` or `Deployable`.
 
 `COPY requirements.txt /requirements.txt`
 or
