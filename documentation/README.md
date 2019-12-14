@@ -105,6 +105,38 @@ In the `tests:` section of the `makefile`, to do a working test of a Docker cont
 
 The `[docker hub name]` is the name used on the Docker Hub (minus the `gcallah/` prefix) and the `[local name]` is the directory name containing the container's `Dockerfile` which is in the `docker_images/` directory.
 
-A test should also be added to the `/tests` directory.
+A test should also be added to the `/tests` directory with the filename format of `test_docker-[local name].py`.
 
-TODO: Expand this section.
+An example test is as follows:
+```
+#!/usr/bin/python3
+
+print("\n[INFO] Running tests for Docker Java image...\n")
+
+import docker
+import unittest2 as unittest
+
+client = docker.from_env()
+
+class TestLanguage(unittest.TestCase):
+    def test_java(self):
+        print("[INFO] Checking Java Installation")
+        response = client.containers.run("java", command="which java", remove=True, name="javacontainer").decode("utf-8")
+        self.assertEqual(response, "/usr/bin/java\n", "Java missing!")
+        '''
+        response = client.containers.run("java", command="java -version", remove=True, name="javacontainer").decode("utf-8")
+        self.assertEqual(response, "java version \"1.8.0_201\"\nJava(TM) SE Runtime Environment (build 1.8.0_201-b09)\nJava HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)\n", "no java installed!")
+        '''
+
+# Add tests for sample code
+class TestSampleCode(unittest.TestCase):
+    def test_sample(self):
+        print("[INFO] Testing sample java code ")
+        response = client.containers.run("java", command="java Test", remove=True, name="javacontainer").decode("utf-8")
+        self.assertEqual(response, "Hello World\n", "Error in Hello World sample!")
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+The test should be modified according to the needs of the test.
