@@ -1,0 +1,6 @@
+setuptools
+coverage
+urllib3
+flake8
+jupyter
+nose
