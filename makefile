@@ -44,6 +44,7 @@ tests: FORCE
 	$(CONTCMD) os os
 	$(CONTCMD) pbda pbda
 	$(CONTCMD) pl pl
+	$(CONTCMD) python python
 	#$(CONTCMD) springboot springboot
 	pytest tests/
 
