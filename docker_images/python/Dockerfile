@@ -4,11 +4,11 @@ COPY requirements.txt /requirements.txt
 
 RUN apt-get update
 
-RUN apt-get install -y vim emacs nano git build-essential
+RUN apt-get install -y vim emacs nano git build-essential bash
 
 RUN pip install --upgrade pip
 
 RUN pip install -r requirements.txt
 
 # run cmd
-CMD ["bash"]
+CMD ["/bin/bash"]
