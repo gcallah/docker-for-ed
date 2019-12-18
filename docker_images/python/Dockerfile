@@ -1,14 +1,14 @@
-FROM python:3.8.0-buster
+FROM phusion/baseimage:0.11
 
 COPY requirements.txt /requirements.txt
 
 RUN apt-get update
 
-RUN apt-get install -y vim emacs nano git build-essential bash
+RUN apt-get install -y python3-pip vim emacs nano git build-essential bash
 
-RUN pip install --upgrade pip
+RUN pip3 install --upgrade pip
 
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 # run cmd
-CMD ["/bin/bash"]
+CMD ["/sbin/my_init"]
