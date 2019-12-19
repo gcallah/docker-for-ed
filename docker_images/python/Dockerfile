@@ -1,6 +1,7 @@
 FROM phusion/baseimage:0.11
 
 COPY requirements.txt /requirements.txt
+COPY hello.py /hello.py
 
 RUN apt-get update
 
