@@ -26,7 +26,7 @@ class TestEditors(unittest.TestCase):
     def test_nano(self):
         print("[INFO] Checking Nano installation")
         response = client.containers.run(IMAGE_NAME, command="which nano", remove=True, name="pythoncontainer").decode("utf-8")
-        self.assertEqual(response, "/usr/bin/nano\n", "Nano missing!")
+        self.assertEqual(response, "/bin/nano\n", "Nano missing!")
     
     def test_emacs(self):
         print("[INFO] Checking Emacs installation")
